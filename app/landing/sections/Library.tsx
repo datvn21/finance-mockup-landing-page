@@ -11,7 +11,7 @@ const industries = [
 
 export default function Library() {
   return (
-    <section className="container mx-auto py-4 space-y-4 px-4 md:px-0">
+    <section className="container mx-auto py-4 space-y-4 px-4 md:px-2">
       {/* Header */}
       <h2 className="text-red-600 font-bold uppercase text-sm">
         THƯ VIỆN KIẾN THỨC

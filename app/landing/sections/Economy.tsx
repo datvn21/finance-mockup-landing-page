@@ -41,7 +41,7 @@ const eventsGlobal = [
 
 export default function Economy() {
   return (
-    <section className="container mx-auto py-4 space-y-4 px-4 md:px-0">
+    <section className="container mx-auto py-4 space-y-4 px-4 md:px-2">
       {/* Header */}
       <h2 className="text-red-600 font-bold uppercase text-sm">
         ECONOMY / KINH TẾ VĨ MÔ VIỆT NAM

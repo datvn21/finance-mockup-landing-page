@@ -4,7 +4,7 @@ import { Link } from "react-router";
 export default function CostUpdate() {
   return (
     <div className="w-full bg-white">
-      <div className="container mx-auto flex justify-center h-full items-center py-2 px-2 md:px-0 gap-8 xl:gap-16">
+      <div className="container mx-auto flex justify-center h-full items-center py-2 px-2 md:px-2 gap-8 xl:gap-16">
         <div className="flex flex-wrap flex-1 justify-between max-w-[320px] border-r-2 pr-4 ">
           <span className="text-xs md:text-md inline">
             VNINDEX – 1,301.24 –
