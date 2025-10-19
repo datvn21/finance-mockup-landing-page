@@ -27,10 +27,11 @@ export default function Highlight() {
               chuyên gia
             </h2>
             <p className="text-gray-600 text-sm">
-              VN-Index trải qua 3 quý đầu năm 2025 với nhiều cú “bẻ lái”. Từ
-              những nhịp giảm mạnh bất ngờ sau “cú sốc” thuế quan, chỉ số chính
+              VN-Index trải qua 3 quý đầu năm 2025 với nhiều cú "bẻ lái". Từ
+              những nhịp giảm mạnh bất ngờ sau "cú sốc" thuế quan, chỉ số chính
               đã bật tăng mạnh mẽ trở lại, liên tiếp phá đỉnh lịch sử...
             </p>
+            <p className="text-blue-600 text-sm mt-2 font-medium">Xem thêm →</p>
           </div>
         </section>
       </div>
@@ -83,6 +84,7 @@ export default function Highlight() {
                   <p className="text-gray-600 text-xs line-clamp-3">
                     {item.desc}
                   </p>
+                  <p className="text-blue-600 text-xs mt-2 font-medium">Xem thêm →</p>
                 </div>
               </div>
             ))}
