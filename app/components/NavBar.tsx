@@ -36,7 +36,7 @@ export default function NavBar() {
         {/* full search: visible on md+ */}
         <div className="hidden md:block flex-1 max-w-[480px] mx-6">
           <div className="relative inline-block w-full">
-            <Search className="w-5 h-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-icon-color" />
+            <Search className="w-5 h-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-main-text-color md:text-icon-color" />
             <input
               className="w-full pl-10 pr-3 py-2 border rounded-xl border-main-text-color/20 focus:border-main-text-color/30 focus:border-2 focus:outline-none"
               type="text"
@@ -50,27 +50,6 @@ export default function NavBar() {
         <div className="flex items-center gap-4 md:gap-6">
           {/* mobile menu button (shows Sign In / Sign Up on small screens) */}
           <div className="md:hidden" ref={mobileMenuRef}>
-            <button
-              onClick={() => setMobileMenuOpen((v) => !v)}
-              aria-label="Mở menu"
-              className="p-2 rounded-md hover:bg-gray-100"
-            >
-              {/* simple hamburger */}
-              <svg
-                className="w-6 h-6"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-              >
-                <path
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            </button>
-
             {mobileMenuOpen && (
               <div className="absolute right-4 top-full mt-2 w-44 bg-white border rounded-md shadow-md z-50">
                 <div className="flex flex-col p-2">
@@ -109,7 +88,7 @@ export default function NavBar() {
               aria-label="Mở tìm kiếm"
               className="p-2 rounded-md hover:bg-gray-100"
             >
-              <Search className="w-5 h-5 text-icon-color" />
+              <Search className="md:w-5 md:h-5 text-main-text-color " />
             </button>
 
             {/* mobile search dropdown */}
@@ -154,6 +133,26 @@ export default function NavBar() {
               {lang}
             </button>
           </div>
+          <button
+            onClick={() => setMobileMenuOpen((v) => !v)}
+            aria-label="Mở menu"
+            className="p-2 rounded-md md:hidden hover:bg-gray-100"
+          >
+            {/* simple hamburger */}
+            <svg
+              className="w-6 h-6"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+            >
+              <path
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
         </div>
       </div>
     </nav>
