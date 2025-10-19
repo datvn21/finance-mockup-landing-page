@@ -13,7 +13,7 @@ import Library from "./sections/Library";
 
 export default function Landing() {
   return (
-    <div className="flex-1 overflow-hidden my-4 ">
+    <div className="flex-1 overflow-hidden mb-4 ">
       <Suspense fallback={<div>Loading...</div>}>
         <Tools />
         <CostUpdate />
