@@ -10,7 +10,6 @@ const newsItems = Array(10).fill({
 export default function Highlight() {
   return (
     <div className="container md:mt-8 mt-4 mx-auto flex flex-col px-4 md:px-2 md:grid md:grid-cols-3 gap-6 items-stretch justify-center min-h-[320px] md:min-h-[420px]">
-      {/* LEFT: Top Story */}
       <div className="md:col-span-2">
         <section className="md:border rounded-xl  md:p-6 h-full flex flex-col cursor-pointer transition-all duration-300 hover:bg-gray-50">
           <p className="text-lg hover:opacity-70 font-semibold text-warning-color mb-2 cursor-pointer">
@@ -36,7 +35,6 @@ export default function Highlight() {
         </section>
       </div>
 
-      {/* RIGHT: Secondary News */}
       <aside className="md:col-span-1">
         <div className="md:border rounded-xl md:p-6 h-full flex flex-col overflow-hidden">
           <p className="text-sm font-semibold mb-2">SECONDARY • 1–5</p>
@@ -63,7 +61,6 @@ export default function Highlight() {
         </div>
       </aside>
 
-      {/* BOTTOM: extra cards */}
       <aside className="w-full col-span-3">
         <div className="rounded-xl h-full flex w-full flex-col">
           <div className="overflow-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">

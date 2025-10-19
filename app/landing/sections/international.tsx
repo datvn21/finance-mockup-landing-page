@@ -12,12 +12,10 @@ const industries = [
 export default function International() {
   return (
     <section className="container mx-auto py-4 space-y-4 px-4 md:px-2">
-      {/* Header */}
       <h2 className="text-lg hover:opacity-70 font-semibold text-warning-color mb-2 cursor-pointer">
         INTERNATIONAL / QUỐC TẾ
       </h2>
 
-      {/* Grid of Industry Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {industries.map((item, i) => (
           <div
