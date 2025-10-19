@@ -13,7 +13,7 @@ export default function Library() {
   return (
     <section className="container mx-auto py-4 space-y-4 px-4 md:px-2">
       {/* Header */}
-      <h2 className="text-lg hover:opacity-70 font-semibold text-warning-color mb-2">
+      <h2 className="text-lg hover:opacity-70 font-semibold text-warning-color mb-2 cursor-pointer">
         THƯ VIỆN KIẾN THỨC
       </h2>
 
@@ -22,7 +22,7 @@ export default function Library() {
         {industries.map((item, i) => (
           <div
             key={i}
-            className="border rounded-xl flex flex-col items-center gap-3 p-4 md:p-6 bg-white"
+            className="border cursor-pointer rounded-xl flex flex-col items-center gap-3 p-4 md:p-6 bg-white"
           >
             <div className="h-[120px] w-full bg-gray-100 rounded-md flex-shrink-0" />
             <div className="w-full text-start">

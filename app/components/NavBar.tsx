@@ -29,7 +29,10 @@ export default function NavBar() {
     <nav className="w-full bg-white relative">
       {/* changed container to flex for better responsive control */}
       <div className="container mx-auto py-3 px-4 flex items-center justify-between bg-white">
-        <Link to="/" className="text-start my-auto font-bold inline-block">
+        <Link
+          to="/"
+          className="text-start my-auto font-bold inline-block cursor-pointer hover:opacity-70"
+        >
           REAL TIME FINANCE
         </Link>
 
@@ -110,24 +113,27 @@ export default function NavBar() {
             )}
           </div>
 
-          <Link to="/login" className="hidden md:inline-block hover:opacity-50">
+          <Link
+            to="/login"
+            className="hidden md:inline-block hover:opacity-50 cursor-pointer"
+          >
             Sign In
           </Link>
           <Link
             to="/register"
-            className="hidden md:inline-block hover:opacity-50"
+            className="hidden md:inline-block hover:opacity-50 cursor-pointer"
           >
             Sign Up
           </Link>
 
           <div className="flex items-center gap-3">
-            <div>
+            <div className="cursor-pointer hover:opacity-70">
               <Bell />
             </div>
             {/* language button placed next to bell */}
             <button
               onClick={() => setLang((l) => (l === "VI" ? "EN" : "VI"))}
-              className="px-2 py-1 rounded-md hover:bg-gray-100 text-sm hidden sm:inline-flex"
+              className="px-2 py-1 rounded-md hover:bg-gray-100 text-sm hidden sm:inline-flex cursor-pointer"
               aria-label="Toggle language"
             >
               {lang}

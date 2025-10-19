@@ -13,7 +13,7 @@ export default function Highlight() {
       {/* LEFT: Top Story */}
       <div className="md:col-span-2">
         <section className="md:border rounded-xl  md:p-6 h-full flex flex-col cursor-pointer transition-all duration-300 hover:bg-gray-50">
-          <p className="text-lg hover:opacity-70 font-semibold text-warning-color mb-2">
+          <p className="text-lg hover:opacity-70 font-semibold text-warning-color mb-2 cursor-pointer">
             TOP STORY • TIN NỔI BẬT
           </p>
           <img
