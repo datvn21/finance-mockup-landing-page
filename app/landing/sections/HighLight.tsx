@@ -22,7 +22,7 @@ export default function Highlight() {
             className="rounded-lg w-full mb-4 object-cover flex-shrink-0 aspect-video"
           />
           <div className="flex-1">
-            <h2 className="text-xl font-bold mb-2">
+            <h2 className="text-xl font-bold mb-2 transition-colors duration-300 hover:text-blue-600">
               Triển vọng thị trường chứng khoán Việt Nam cuối năm qua lăng kính
               chuyên gia
             </h2>
@@ -51,7 +51,7 @@ export default function Highlight() {
                   className="h-16 sm:h-20 w-28 sm:w-36 object-cover rounded-md flex-shrink-0"
                 />
                 <div className="text-xs">
-                  <h4 className="font-semibold mb-1 line-clamp-2">
+                  <h4 className="font-semibold mb-1 line-clamp-2 transition-colors duration-300 hover:text-blue-600">
                     {item.title}
                   </h4>
                   <p className="text-gray-600 line-clamp-3">{item.desc}</p>
@@ -77,7 +77,7 @@ export default function Highlight() {
                   className="w-full min-h-[150px] aspect-video object-cover rounded-md flex-shrink-0"
                 />
                 <div className="text-sm">
-                  <h4 className="font-semibold mb-1 line-clamp-2">
+                  <h4 className="font-semibold mb-1 line-clamp-2 transition-colors duration-300 hover:text-blue-600">
                     {item.title}
                   </h4>
                   <p className="text-gray-600 text-xs line-clamp-3">
