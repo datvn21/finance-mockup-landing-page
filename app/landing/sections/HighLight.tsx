@@ -12,7 +12,7 @@ export default function Highlight() {
     <div className="container md:mt-8 mt-4 mx-auto flex flex-col px-4 md:px-2 md:grid md:grid-cols-3 gap-6 items-stretch justify-center min-h-[320px] md:min-h-[420px]">
       {/* LEFT: Top Story */}
       <div className="md:col-span-2">
-        <section className="md:border rounded-xl  md:p-6 h-full flex flex-col">
+        <section className="md:border rounded-xl  md:p-6 h-full flex flex-col cursor-pointer transition-all duration-300 hover:bg-gray-50">
           <p className="text-sm font-semibold text-warning-color mb-2">
             TOP STORY • TIN NỔI BẬT
           </p>
@@ -43,7 +43,7 @@ export default function Highlight() {
             {newsItems.slice(0, 6).map((item, i) => (
               <div
                 key={i}
-                className="flex gap-2 rounded-lg p-2 md:px-2 items-start"
+                className="flex gap-2 rounded-lg p-2 md:px-2 items-start cursor-pointer transition-all duration-300 hover:bg-gray-100"
               >
                 <img
                   src={item.img}
@@ -69,7 +69,7 @@ export default function Highlight() {
             {newsItems.slice(0, 3).map((item, i) => (
               <div
                 key={i}
-                className="flex flex-col sm:flex-col gap-3 rounded-lg p-4 md:p-6 border items-start"
+                className="flex flex-col sm:flex-col gap-3 rounded-lg p-4 md:p-6 border items-start cursor-pointer transition-all duration-300 hover:bg-gray-50 hover:border-gray-400"
               >
                 <img
                   src={item.img}
