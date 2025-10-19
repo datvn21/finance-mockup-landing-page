@@ -84,7 +84,9 @@ export default function Highlight() {
                   <p className="text-gray-600 text-xs line-clamp-3">
                     {item.desc}
                   </p>
-                  <p className="text-blue-600 text-xs mt-2 font-medium">Xem thêm →</p>
+                  <p className="text-blue-600 text-xs mt-2 font-medium">
+                    Xem thêm
+                  </p>
                 </div>
               </div>
             ))}
