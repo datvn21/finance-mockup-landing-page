@@ -13,7 +13,7 @@ export default function Library() {
   return (
     <section className="container mx-auto py-4 space-y-4 px-4 md:px-2">
       {/* Header */}
-      <h2 className="text-red-600 font-bold uppercase text-sm">
+      <h2 className="text-lg hover:opacity-70 font-semibold text-warning-color mb-2">
         THƯ VIỆN KIẾN THỨC
       </h2>
 

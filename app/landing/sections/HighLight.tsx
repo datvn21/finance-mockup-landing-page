@@ -13,7 +13,7 @@ export default function Highlight() {
       {/* LEFT: Top Story */}
       <div className="md:col-span-2">
         <section className="md:border rounded-xl  md:p-6 h-full flex flex-col cursor-pointer transition-all duration-300 hover:bg-gray-50">
-          <p className="text-sm font-semibold text-warning-color mb-2">
+          <p className="text-lg hover:opacity-70 font-semibold text-warning-color mb-2">
             TOP STORY • TIN NỔI BẬT
           </p>
           <img
@@ -31,7 +31,7 @@ export default function Highlight() {
               những nhịp giảm mạnh bất ngờ sau "cú sốc" thuế quan, chỉ số chính
               đã bật tăng mạnh mẽ trở lại, liên tiếp phá đỉnh lịch sử...
             </p>
-            <p className="text-blue-600 text-sm mt-2 font-medium">Xem thêm →</p>
+            <p className="text-blue-600 text-sm mt-2 font-medium">Xem thêm</p>
           </div>
         </section>
       </div>

@@ -43,7 +43,7 @@ export default function Economy() {
   return (
     <section className="container mx-auto py-4 space-y-4 px-4 md:px-2">
       {/* Header */}
-      <h2 className="text-red-600 font-bold uppercase text-sm">
+      <h2 className="text-lg hover:opacity-70 font-semibold text-warning-color mb-2">
         ECONOMY / KINH TẾ VĨ MÔ VIỆT NAM
       </h2>
 
@@ -70,7 +70,7 @@ export default function Economy() {
         <div className="border rounded-xl p-4 space-y-5 bg-white">
           {/* Trong nước */}
           <div>
-            <h4 className="font-semibold text-sm mb-2">
+            <h4 className="font-semibold text-lg hover:opacity-70  mb-2">
               Lịch sự kiện • Trong nước (VN)
             </h4>
             <div className="space-y-1 text-sm">
@@ -91,7 +91,7 @@ export default function Economy() {
 
           {/* Quốc tế */}
           <div>
-            <h4 className="font-semibold text-sm mb-2">
+            <h4 className="font-semibold text-lg hover:opacity-70  mb-2">
               Lịch sự kiện • Quốc tế (Global)
             </h4>
             <div className="space-y-1 text-sm">
