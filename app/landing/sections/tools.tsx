@@ -25,7 +25,7 @@ export default function Tools() {
         </Link>
         <Link
           to={"/"}
-          className="font-normal cursor-pointer text-sm md:text-base text-secondary-text-color whitespace-nowrap hidden sm:inline-block"
+          className="font-normal cursor-pointer text-sm md:text-base text-secondary-text-color whitespace-nowrap"
         >
           International
         </Link>
