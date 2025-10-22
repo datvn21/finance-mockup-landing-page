@@ -98,7 +98,7 @@ export default function NavBar({
             <button
               onClick={() => setSearchOpen((v) => !v)}
               aria-label="Mở tìm kiếm"
-              className="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800"
+              className="p-2 rounded-md  dark:hover:bg-gray-800"
             >
               <Search className="md:w-5 md:h-5 text-main-text-color dark:text-gray-400" />
             </button>
@@ -125,7 +125,7 @@ export default function NavBar({
           {/* language button - first on desktop */}
           <button
             onClick={() => setLang((l) => (l === "VI" ? "EN" : "VI"))}
-            className="px-2 py-1 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 text-sm hidden md:inline-flex cursor-pointer dark:text-white"
+            className="px-2 py-1 rounded-md  dark:hover:bg-gray-800 text-sm hidden md:inline-flex cursor-pointer dark:text-white"
             aria-label="Chuyển ngôn ngữ"
           >
             VI/EN
@@ -150,11 +150,22 @@ export default function NavBar({
               <Bell className="dark:text-white" />
             </div>
           </div>
-
+          {/* Dark/Light mode toggle */}
+          <button
+            onClick={() => setDarkMode((m) => !m)}
+            className="p-2 rounded-md hover:bg-main-bg-color/80 inline-flex cursor-pointer"
+            aria-label="Chuyển chế độ hiển thị"
+          >
+            {darkMode ? (
+              <Sun className=" text-main-text-color" />
+            ) : (
+              <Moon className=" text-main-text-color" />
+            )}
+          </button>
           <button
             onClick={() => setMobileMenuOpen((v) => !v)}
             aria-label="Mở menu"
-            className="p-2 rounded-md md:hidden hover:bg-gray-100 dark:hover:bg-gray-800"
+            className="p-2 rounded-md md:hidden  dark:hover:bg-gray-800"
           >
             {/* simple hamburger */}
             <svg
@@ -170,18 +181,6 @@ export default function NavBar({
                 d="M4 6h16M4 12h16M4 18h16"
               />
             </svg>
-          </button>
-          {/* Dark/Light mode toggle */}
-          <button
-            onClick={() => setDarkMode((m) => !m)}
-            className="p-2 rounded-md hover:bg-main-bg-color/80 hidden md:inline-flex cursor-pointer"
-            aria-label="Chuyển chế độ hiển thị"
-          >
-            {darkMode ? (
-              <Sun className=" text-main-text-color" />
-            ) : (
-              <Moon className=" text-main-text-color" />
-            )}
           </button>
         </div>
       </div>
