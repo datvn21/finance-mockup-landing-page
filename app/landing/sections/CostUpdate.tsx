@@ -37,19 +37,18 @@ export default function CostUpdate() {
   }, []);
 
   return (
-    <div className="w-full bg-white overflow-hidden">
+    <div className="w-full bg-main-bg-color overflow-hidden transition-colors duration-300">
       <div
         ref={scrollRef}
         className="container mx-auto flex items-center py-2 px-2 md:px-2 gap-8 overflow-x-hidden"
         style={{ scrollBehavior: "auto" }}
       >
-        {/* Render items 2 lần để tạo hiệu ứng vô tận */}
         {[...items, ...items].map((item, index) => (
           <div
             key={index}
-            className="flex flex-wrap justify-between min-w-[280px] border-r-2 pr-4 flex-shrink-0"
+            className="flex flex-wrap justify-between min-w-[280px] border-r-2 border-gray-200 dark:border-gray-700 pr-4 flex-shrink-0"
           >
-            <span className="text-sm md:text-md">
+            <span className="text-sm md:text-md dark:text-gray-300">
               {item.label} – {item.value} –{" "}
             </span>
             <span className={`text-sm md:text-md ${item.up ? "up" : "down"}`}>

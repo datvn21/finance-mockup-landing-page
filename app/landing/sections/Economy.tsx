@@ -42,45 +42,47 @@ const eventsGlobal = [
 export default function Economy() {
   return (
     <section className="container mx-auto py-4 space-y-4 px-4 md:px-2">
-      <h2 className="text-lg hover:opacity-70 font-semibold text-warning-color mb-2 cursor-pointer">
-        ECONOMY / KINH TẾ VĨ MÔ VIỆT NAM
+      <h2 className="text-lg hover:opacity-70 font-semibold text-warning-color dark:text-red-400 mb-2 cursor-pointer">
+        KINH TẾ VĨ MÔ VIỆT NAM
       </h2>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
         {/* LEFT: Tin tức */}
-        <div className="lg:col-span-2 md:border-2 border-gray-200 md:p-4 rounded-xl space-y-3 bg-white">
+        <div className="lg:col-span-2 md:border-2 border-gray-200 dark:border-gray-700 md:p-4 rounded-xl space-y-3 bg-main-bg-color dark:bg-gray-800">
           {macroNews.map((item, i) => (
             <div
               key={i}
-              className="border-2 border-gray-200 rounded-xl flex items-center gap-3 p-3 cursor-pointer transition-all duration-300 hover:bg-gray-50"
+              className="border-2 border-gray-200 dark:border-gray-700 rounded-xl flex items-center gap-3 p-3 cursor-pointer transition-all duration-300 hover:bg-main-bg-color/80 dark:hover:bg-gray-700"
             >
-              <div className="aspect-video h-16 bg-gray-100 rounded-md flex-shrink-0" />
+              <div className="aspect-video h-16 bg-gray-100 dark:bg-gray-700 rounded-md flex-shrink-0" />
               <div>
-                <h3 className="font-medium text-sm transition-colors duration-300 hover:text-blue-600">
+                <h3 className="font-medium text-sm transition-colors duration-300 hover:text-blue-600 dark:text-white dark:hover:text-blue-400">
                   {item.title}
                 </h3>
-                <p className="text-xs text-gray-600">{item.desc}</p>
+                <p className="text-xs text-gray-600 dark:text-gray-400">
+                  {item.desc}
+                </p>
               </div>
             </div>
           ))}
         </div>
 
         {/* RIGHT: Lịch sự kiện */}
-        <div className="border-2 border-gray-200 rounded-xl p-4 space-y-5 bg-white">
+        <div className="border-2 border-gray-200 dark:border-gray-700 rounded-xl p-4 space-y-5 bg-main-bg-color dark:bg-gray-800">
           {/* Trong nước */}
           <div>
-            <h4 className="font-semibold text-lg hover:opacity-70  mb-2">
-              Lịch sự kiện • Trong nước (VN)
+            <h4 className="font-semibold text-lg hover:opacity-70 mb-2 dark:text-white">
+              Lịch sự kiện • Trong nước
             </h4>
             <div className="space-y-1 text-sm">
               {eventsVN.map((ev, i) => (
                 <div
                   key={i}
-                  className="flex justify-between border-b border-dashed border-gray-200 pb-1"
+                  className="flex justify-between border-b border-dashed border-gray-200 dark:border-gray-700 pb-1"
                 >
-                  <span className="w-1/5">{ev.date}</span>
-                  <span className="w-2/5">{ev.event}</span>
-                  <span className="w-2/5 text-right text-gray-700">
+                  <span className="w-1/5 dark:text-gray-300">{ev.date}</span>
+                  <span className="w-2/5 dark:text-gray-300">{ev.event}</span>
+                  <span className="w-2/5 text-right text-gray-700 dark:text-gray-400">
                     {ev.value}
                   </span>
                 </div>
@@ -90,18 +92,18 @@ export default function Economy() {
 
           {/* Quốc tế */}
           <div>
-            <h4 className="font-semibold text-lg hover:opacity-70  mb-2">
-              Lịch sự kiện • Quốc tế (Global)
+            <h4 className="font-semibold text-lg hover:opacity-70 mb-2 dark:text-white">
+              Lịch sự kiện • Quốc tế
             </h4>
             <div className="space-y-1 text-sm">
               {eventsGlobal.map((ev, i) => (
                 <div
                   key={i}
-                  className="flex justify-between border-b border-dashed border-gray-200 pb-1"
+                  className="flex justify-between border-b border-dashed border-gray-200 dark:border-gray-700 pb-1"
                 >
-                  <span className="w-1/5">{ev.date}</span>
-                  <span className="w-2/5">{ev.event}</span>
-                  <span className="w-2/5 text-right text-gray-700">
+                  <span className="w-1/5 dark:text-gray-300">{ev.date}</span>
+                  <span className="w-2/5 dark:text-gray-300">{ev.event}</span>
+                  <span className="w-2/5 text-right text-gray-700 dark:text-gray-400">
                     {ev.value}
                   </span>
                 </div>

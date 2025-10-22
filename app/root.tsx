@@ -11,6 +11,7 @@ import type { Route } from "./+types/root";
 import "./app.css";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
+import { useState } from "react";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -26,8 +27,9 @@ export const links: Route.LinksFunction = () => [
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
+  const [darkMode, setDarkMode] = useState(false);
   return (
-    <html lang="en">
+    <html className={darkMode ? "dark" : ""} lang="en">
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -35,7 +37,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body className="flex flex-col min-h-screen overflow-x-hidden bg-main-bg-color">
-        <NavBar />
+        <NavBar setDarkMode={setDarkMode} darkMode={darkMode} />
         {children}
         <ScrollRestoration />
         <Scripts />

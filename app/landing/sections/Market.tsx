@@ -1,38 +1,41 @@
 import React from "react";
 import { Link } from "react-router";
 const SectionBox = ({ title }: { title: string }) => (
-  <div className="border-2 border-gray-200 rounded-xl p-4 space-y-3 bg-white">
+  <div className="border-2 border-main-text-color/30 dark:border-gray-700 rounded-xl p-4 space-y-3 bg-main-bg-color dark:bg-gray-800">
     {/* Tiêu đề nhóm */}
-    <div className="inline-block bg-gray-200 text-gray-700 text-sm font-medium px-3 py-1 rounded-md">
+    <div className="inline-block bg-mainborder-main-text-color/30  text-gray-700 text-sm font-medium px-3 py-1 rounded-md">
       {title}
     </div>
 
     {/* Nội dung chính */}
     <div className="flex flex-col lg:flex-row gap-4">
       {/* Tin chính */}
-      <div className="flex-1 border-2 border-gray-200 rounded-xl bg-gray-50 p-4 cursor-pointer transition-all duration-300 hover:bg-gray-100">
-        <div className="h-32 bg-gray-100 rounded-lg mb-2" />
-        <h3 className="font-semibold text-sm transition-colors duration-300 hover:text-blue-600">
-          Tiêu đề tin chính
+      <div className="flex-1 border-2 border-main-text-color/30 rounded-xl bg-gray-50 dark:bg-gray-900 p-4 cursor-pointer transition-all duration-300 ">
+        <div className="h-32 bg-main-text-color/50 rounded-lg mb-2" />
+        <h3 className="font-semibold text-sm transition-colors duration-300 hover:text-blue-600 dark:text-white dark:hover:text-blue-400">
+          Thị trường tăng điểm mạnh trong phiên sáng
         </h3>
-        <p className="text-gray-600 text-xs">
-          Tóm tắt ngắn mô tả diễn biến chính
+        <p className="text-gray-600 dark:text-gray-400 text-xs">
+          Dòng tiền chảy mạnh vào nhóm cổ phiếu vốn hóa lớn
         </p>
       </div>
 
       {/* Tin phụ */}
       <div className="flex flex-col justify-start flex-shrink-0 w-full lg:w-1/3 space-y-3">
-        {[1, 2].map((i) => (
+        {[
+          { title: "Thanh khoản cải thiện", desc: "Đạt 15,000 tỷ đồng" },
+          { title: "Khối ngoại mua ròng", desc: "+250 tỷ đồng" },
+        ].map((item, i) => (
           <div
             key={i}
-            className="border-2 border-gray-200 rounded-xl flex items-center gap-2 p-2 cursor-pointer transition-all duration-300 hover:bg-gray-50"
+            className="border-2 border-main-text-color/30 dark:border-gray-700 rounded-xl flex items-center gap-2 p-2 cursor-pointer transition-all duration-300 hover:bg-main-bg-color/80 dark:hover:bg-gray-700"
           >
-            <div className="w-12 h-12 rounded-md bg-gray-100 flex-shrink-0" />
+            <div className="w-12 h-12 rounded-md bg-gray-100 dark:bg-gray-700 flex-shrink-0" />
             <div className="text-xs">
-              <p className="font-medium transition-colors duration-300 hover:text-blue-600">
-                Tin phụ {i}
+              <p className="font-medium transition-colors duration-300 hover:text-blue-600 dark:text-white dark:hover:text-blue-400">
+                {item.title}
               </p>
-              <p className="text-gray-600">Tóm tắt 1 dòng</p>
+              <p className="text-gray-600 dark:text-gray-400">{item.desc}</p>
             </div>
           </div>
         ))}
@@ -40,21 +43,22 @@ const SectionBox = ({ title }: { title: string }) => (
     </div>
   </div>
 );
+
 export default function Market() {
   return (
     <div className="container mx-auto mt-8 flex flex-col gap-4 px-4 md:px-2">
       <div className="flex justify-between items-center">
-        <h2 className="text-lg cursor-pointer hover:opacity-70 font-semibold text-warning-color mb-2">
+        <h2 className="text-lg cursor-pointer hover:opacity-70 font-semibold text-warning-color dark:text-red-400 mb-2">
           THỊ TRƯỜNG
         </h2>
       </div>
 
       {/* Nổi bật hôm nay */}
-      <div className="border-2 border-gray-200 bg-white rounded-xl flex justify-between items-center px-4 py-3">
-        <span className="font-medium">Nổi bật hôm nay</span>
+      <div className="border-2 border-main-text-color/30 dark:border-gray-700 bg-main-bg-color dark:bg-gray-800 rounded-xl flex justify-between items-center px-4 py-3">
+        <span className="font-medium dark:text-white">Nổi bật hôm nay</span>
         <Link
           to={"/"}
-          className="text-sm text-gray-600 cursor-pointer hover:text-blue-600 transition-colors duration-300 flex items-center gap-1"
+          className="text-sm text-gray-600 dark:text-gray-400 cursor-pointer hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300 flex items-center gap-1"
         >
           Xem thêm thị trường →
         </Link>

@@ -1,14 +1,20 @@
 @import "tailwindcss";
 
-htmL {
+html {
   font-size: 16px;
+}
+
+body {
+  background-color: var(--color-main-bg-color);
+  color: var(--color-main-text-color);
+  transition: background-color 0.3s, color 0.3s;
 }
 
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
-@theme inline {
+@theme light {
   --color-main-bg-color: #fbfbfb;
   --color-main-text-color: #000000;
   --color-warning-color: #dc2626;
@@ -16,6 +22,11 @@ htmL {
   --color-secondary-bg-color: #123e8a;
   --color-secondary-text-color: #ffffff;
   --color-icon-color: #a0a4ac;
+}
+
+.dark {
+  --color-main-bg-color: #202225;
+  --color-main-text-color: #fbfbfb;
 }
 
 .up {
