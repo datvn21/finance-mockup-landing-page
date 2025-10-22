@@ -48,11 +48,11 @@ export default function Economy() {
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
         {/* LEFT: Tin tức */}
-        <div className="lg:col-span-2 md:border md:p-4  rounded-xl space-y-3 bg-white">
+        <div className="lg:col-span-2 md:border-2 border-gray-200 md:p-4 rounded-xl space-y-3 bg-white">
           {macroNews.map((item, i) => (
             <div
               key={i}
-              className="border rounded-xl flex items-center gap-3 p-3 cursor-pointer transition-all duration-300 hover:bg-gray-50 hover:border-gray-400"
+              className="border-2 border-gray-200 rounded-xl flex items-center gap-3 p-3 cursor-pointer transition-all duration-300 hover:bg-gray-50"
             >
               <div className="aspect-video h-16 bg-gray-100 rounded-md flex-shrink-0" />
               <div>
@@ -66,7 +66,7 @@ export default function Economy() {
         </div>
 
         {/* RIGHT: Lịch sự kiện */}
-        <div className="border rounded-xl p-4 space-y-5 bg-white">
+        <div className="border-2 border-gray-200 rounded-xl p-4 space-y-5 bg-white">
           {/* Trong nước */}
           <div>
             <h4 className="font-semibold text-lg hover:opacity-70  mb-2">

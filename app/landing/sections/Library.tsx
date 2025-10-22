@@ -1,12 +1,12 @@
 import React from "react";
 
 const industries = [
-  { title: "Ngành nổi bật", desc: "Tóm tắt 1–2 dòng" },
-  { title: "Ngành nổi bật", desc: "Tóm tắt 1–2 dòng" },
-  { title: "Ngành nổi bật", desc: "Tóm tắt 1–2 dòng" },
-  { title: "Ngành nổi bật", desc: "Tóm tắt 1–2 dòng" },
-  { title: "Ngành nổi bật", desc: "Tóm tắt 1–2 dòng" },
-  { title: "Ngành nổi bật", desc: "Tóm tắt 1–2 dòng" },
+  { title: "Chủ đề nổi bật", desc: "Tóm tắt nội dung 1–2 dòng" },
+  { title: "Chủ đề nổi bật", desc: "Tóm tắt nội dung 1–2 dòng" },
+  { title: "Chủ đề nổi bật", desc: "Tóm tắt nội dung 1–2 dòng" },
+  { title: "Chủ đề nổi bật", desc: "Tóm tắt nội dung 1–2 dòng" },
+  { title: "Chủ đề nổi bật", desc: "Tóm tắt nội dung 1–2 dòng" },
+  { title: "Chủ đề nổi bật", desc: "Tóm tắt nội dung 1–2 dòng" },
 ];
 
 export default function Library() {
@@ -20,7 +20,7 @@ export default function Library() {
         {industries.map((item, i) => (
           <div
             key={i}
-            className="border cursor-pointer rounded-xl flex flex-col items-center gap-3 p-4 md:p-6 bg-white"
+            className="border-2 border-gray-200 cursor-pointer rounded-xl flex flex-col items-center gap-3 p-4 md:p-6 bg-white hover:bg-gray-50 transition-all duration-300"
           >
             <div className="h-[120px] w-full bg-gray-100 rounded-md flex-shrink-0" />
             <div className="w-full text-start">

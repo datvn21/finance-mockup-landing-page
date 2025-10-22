@@ -1,26 +1,26 @@
 import React from "react";
 
 const industries = [
-  { title: "Ngành nổi bật", desc: "Tóm tắt 1–2 dòng" },
-  { title: "Ngành nổi bật", desc: "Tóm tắt 1–2 dòng" },
-  { title: "Ngành nổi bật", desc: "Tóm tắt 1–2 dòng" },
-  { title: "Ngành nổi bật", desc: "Tóm tắt 1–2 dòng" },
-  { title: "Ngành nổi bật", desc: "Tóm tắt 1–2 dòng" },
-  { title: "Ngành nổi bật", desc: "Tóm tắt 1–2 dòng" },
+  { title: "Chính sách mới", desc: "Tóm tắt nội dung 1–2 dòng" },
+  { title: "Chính sách mới", desc: "Tóm tắt nội dung 1–2 dòng" },
+  { title: "Chính sách mới", desc: "Tóm tắt nội dung 1–2 dòng" },
+  { title: "Chính sách mới", desc: "Tóm tắt nội dung 1–2 dòng" },
+  { title: "Chính sách mới", desc: "Tóm tắt nội dung 1–2 dòng" },
+  { title: "Chính sách mới", desc: "Tóm tắt nội dung 1–2 dòng" },
 ];
 
 export default function PolicyRegulation() {
   return (
     <section className="container mx-auto py-4 space-y-4 px-4 md:px-2">
       <h2 className="text-lg hover:opacity-70 font-semibold text-warning-color mb-2 cursor-pointer">
-        POLICY & REGULATION / CHÍNH SÁCH & QUY ĐỊNH
+        CHÍNH SÁCH & QUY ĐỊNH
       </h2>
 
       <div className="grid grid-cols-1  gap-4">
         {industries.map((item, i) => (
           <div
             key={i}
-            className="border rounded-xl flex items-center gap-3 p-3 bg-white cursor-pointer transition-all duration-300 hover:bg-gray-50 hover:border-gray-400"
+            className="border-2 border-gray-200 rounded-xl flex items-center gap-3 p-3 bg-white cursor-pointer transition-all duration-300 hover:bg-gray-50"
           >
             <div className="aspect-video h-16 bg-gray-100 rounded-md flex-shrink-0" />
             <div>

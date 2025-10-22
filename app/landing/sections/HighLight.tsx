@@ -2,88 +2,99 @@ import React from "react";
 
 const newsItems = Array(10).fill({
   title:
-    "FPT, MSN và HPG là tâm điểm mua vào của 5 quỹ ETF quy mô 20.000 tỷ đồng",
-  desc: "SSI Research đưa ra dự báo giao dịch của nhóm quỹ ETF với tổng tài sản khoảng 20.000 trong kỳ cơ cấu quý IV/2025.",
-  img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6hEJiotIsn5wXASKc1sSCckMFMJZV-PVx-g&s",
+    "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor",
+  desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkZXmghOOesxzSaFMXaLH0J6ZltDmafBAIQw&s",
 });
 
 export default function Highlight() {
   return (
-    <div className="container md:mt-8 mt-4 mx-auto flex flex-col px-4 md:px-2 md:grid md:grid-cols-3 gap-6 items-stretch justify-center min-h-[320px] md:min-h-[420px]">
-      <div className="md:col-span-2">
-        <section className="md:border rounded-xl  md:p-6 h-full flex flex-col cursor-pointer transition-all duration-300 hover:bg-gray-50">
-          <p className="text-lg hover:opacity-70 font-semibold text-warning-color mb-2 cursor-pointer">
-            TOP STORY • TIN NỔI BẬT
-          </p>
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmlAoPVLMcG7Nb3u4WJeUPhh0ndAvMN7-90g&s"
-            alt="Top story"
-            className="rounded-lg w-full mb-4 object-cover flex-shrink-0 aspect-video"
-          />
-          <div className="flex-1">
-            <h2 className="text-xl font-bold mb-2 transition-colors duration-300 hover:text-blue-600">
-              Triển vọng thị trường chứng khoán Việt Nam cuối năm qua lăng kính
-              chuyên gia
-            </h2>
-            <p className="text-gray-600 text-sm">
-              VN-Index trải qua 3 quý đầu năm 2025 với nhiều cú "bẻ lái". Từ
-              những nhịp giảm mạnh bất ngờ sau "cú sốc" thuế quan, chỉ số chính
-              đã bật tăng mạnh mẽ trở lại, liên tiếp phá đỉnh lịch sử...
+    <div className="container mx-auto pt-12 px-4 md:px-0">
+      {/* Top Story & Secondary News - Side by Side */}
+      <div className="grid lg:grid-cols-3 gap-6 mb-6">
+        {/* Top Story Section - Takes 2 columns */}
+        <div className="lg:col-span-2 ">
+          <section className="bg-white rounded-xl border-2 border-gray-200 overflow-hidden transition-colors h-full cursor-pointer hover:bg-gray-50 group">
+            <div className="px-6 pt-6">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkZXmghOOesxzSaFMXaLH0J6ZltDmafBAIQw&s"
+                alt="Top story"
+                className="w-full h-64 md:h-96 object-cover rounded-xl"
+              />
+            </div>
+            <div className="p-6 md:p-8">
+              <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
+                Lorem ipsum dolor sit amet consectetur adipiscing elit
+              </h2>
+              <p className="text-gray-600 mb-6 text-base md:text-lg leading-relaxed line-clamp-3">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+              </p>
+              <p className="text-blue-600 text-sm font-semibold cursor-pointer transition-colors">
+                Xem thêm →
+              </p>
+            </div>
+          </section>
+        </div>
+
+        {/* Secondary News Section - Takes 1 column */}
+        <aside className="lg:col-span-1">
+          <div className="bg-white rounded-xl border-2 border-gray-200 p-6 h-full">
+            <p className="text-sm font-bold text-gray-700 pb-3">
+              SECONDARY • 1–5
             </p>
-            <p className="text-blue-600 text-sm mt-2 font-medium">Xem thêm</p>
+            <div className="space-y-4">
+              {newsItems.slice(0, 5).map((item, i) => (
+                <div
+                  key={i}
+                  className="py-2 pr-2 rounded-lg transition-colors cursor-pointer hover:bg-gray-50 group"
+                >
+                  <div className="flex gap-3">
+                    <img
+                      src={item.img}
+                      alt=""
+                      className="h-20 aspect-video object-cover rounded-lg flex-shrink-0 border border-gray-200"
+                    />
+                    <div className="flex-1">
+                      <h4 className="font-semibold text-sm text-gray-900 mb-1 line-clamp-2 group-hover:text-blue-600 transition-colors">
+                        {item.title}
+                      </h4>
+                      <p className="text-xs text-gray-600 line-clamp-2">
+                        {item.desc}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
-        </section>
+        </aside>
       </div>
 
-      <aside className="md:col-span-1">
-        <div className="md:border rounded-xl md:p-6 h-full flex flex-col overflow-hidden">
-          <p className="text-sm font-semibold mb-2">SECONDARY • 1–5</p>
-          <div className=" overflow-auto h-full">
-            {newsItems.slice(0, 6).map((item, i) => (
-              <div
-                key={i}
-                className="flex gap-2 rounded-lg p-2 md:px-2 items-start cursor-pointer transition-all duration-300 hover:bg-gray-100"
-              >
-                <img
-                  src={item.img}
-                  alt=""
-                  className="h-16 sm:h-20 w-28 sm:w-36 object-cover rounded-md flex-shrink-0"
-                />
-                <div className="text-xs">
-                  <h4 className="font-semibold mb-1 line-clamp-2 transition-colors duration-300 hover:text-blue-600">
-                    {item.title}
-                  </h4>
-                  <p className="text-gray-600 line-clamp-3">{item.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </aside>
-
-      <aside className="w-full col-span-3">
-        <div className="rounded-xl h-full flex w-full flex-col">
-          <div className="overflow-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      {/* Grid News Section */}
+      <aside>
+        <div>
+          <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-6">
             {newsItems.slice(0, 3).map((item, i) => (
               <div
                 key={i}
-                className="flex flex-col sm:flex-col gap-3 rounded-lg p-4 md:p-6 border items-start cursor-pointer transition-all duration-300 hover:bg-gray-50 hover:border-gray-400"
+                className="bg-white rounded-xl border-2 border-gray-200 overflow-hidden transition-colors cursor-pointer hover:bg-gray-50 group"
               >
-                <img
-                  src={item.img}
-                  alt=""
-                  className="w-full min-h-[150px] aspect-video object-cover rounded-md flex-shrink-0"
-                />
-                <div className="text-sm">
-                  <h4 className="font-semibold mb-1 line-clamp-2 transition-colors duration-300 hover:text-blue-600">
-                    {item.title}
-                  </h4>
-                  <p className="text-gray-600 text-xs line-clamp-3">
-                    {item.desc}
-                  </p>
-                  <p className="text-blue-600 text-xs mt-2 font-medium">
-                    Xem thêm
-                  </p>
+                <div className="p-4 flex gap-4">
+                  <img
+                    src={item.img}
+                    alt=""
+                    className="aspect-video h-32 object-cover rounded-lg flex-shrink-0"
+                  />
+                  <div className="flex-1 flex flex-col justify-center">
+                    <h4 className="font-semibold text-md text-gray-900 mb-2 line-clamp-4 group-hover:text-blue-600 transition-colors">
+                      {item.title}
+                    </h4>
+                    <p className="text-sm text-gray-600 mb-2 line-clamp-3">
+                      {item.desc}
+                    </p>
+                  </div>
                 </div>
               </div>
             ))}

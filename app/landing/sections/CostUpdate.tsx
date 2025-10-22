@@ -1,28 +1,62 @@
-import React from "react";
-import { Link } from "react-router";
+import React, { useEffect, useRef } from "react";
+
+const items = [
+  { label: "VNINDEX", value: "1,301.24", change: "+1.02%", up: true },
+  { label: "USD/VND", value: "24,560", change: "-0.02%", up: true },
+  { label: "GOLD", value: "2,365.40", change: "+0.12%", up: true },
+  { label: "WTI", value: "78.21", change: "-0.27%", up: false },
+  { label: "BTC/USD", value: "43,250", change: "+2.15%", up: true },
+  { label: "S&P 500", value: "4,568.20", change: "+0.45%", up: true },
+  { label: "ETH", value: "4,568.20", change: "+0.65%", up: true },
+];
 
 export default function CostUpdate() {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const scrollContainer = scrollRef.current;
+    if (!scrollContainer) return;
+
+    let animationId: number;
+    let scrollPosition = 0;
+
+    const scroll = () => {
+      scrollPosition += 0.5;
+
+      if (scrollPosition >= scrollContainer.scrollWidth / 2) {
+        scrollPosition = 0;
+      }
+
+      scrollContainer.scrollLeft = scrollPosition;
+      animationId = requestAnimationFrame(scroll);
+    };
+
+    animationId = requestAnimationFrame(scroll);
+
+    return () => cancelAnimationFrame(animationId);
+  }, []);
+
   return (
-    <div className="w-full bg-white">
-      <div className="container mx-auto flex justify-center h-full items-center py-2 px-2 md:px-2 gap-8 xl:gap-16">
-        <div className="flex flex-wrap flex-1 justify-between max-w-[320px] border-r-2 pr-4 ">
-          <span className="text-xs md:text-md inline">
-            VNINDEX – 1,301.24 –
-          </span>
-          <span className="up text-xs md:text-md"> +1.02%</span>
-        </div>
-        <div className="flex flex-wrap flex-1 justify-between max-w-[320px] border-r-2 pr-4">
-          <span className="text-xs md:text-md">USD/VND – 24,560 – </span>
-          <span className="up text-xs md:text-md"> -0.02%</span>
-        </div>
-        <div className="xl:flex flex-wrap hidden flex-1 justify-between max-w-[320px] border-r-2 pr-4">
-          <span className="text-xs md:text-md">GOLD – 2,365.40 – </span>
-          <span className="up text-xs md:text-md"> +0.12%</span>
-        </div>
-        <div className="xl:flex flex-wrap hidden flex-1 justify-between max-w-[320px] border-r-2 pr-4">
-          <span className="text-xs md:text-md">WTI – 78.21 – </span>
-          <span className="down text-xs md:text-md">-0.27%</span>
-        </div>
+    <div className="w-full bg-white overflow-hidden">
+      <div
+        ref={scrollRef}
+        className="container mx-auto flex items-center py-2 px-2 md:px-2 gap-8 overflow-x-hidden"
+        style={{ scrollBehavior: "auto" }}
+      >
+        {/* Render items 2 lần để tạo hiệu ứng vô tận */}
+        {[...items, ...items].map((item, index) => (
+          <div
+            key={index}
+            className="flex flex-wrap justify-between min-w-[280px] border-r-2 pr-4 flex-shrink-0"
+          >
+            <span className="text-sm md:text-md">
+              {item.label} – {item.value} –{" "}
+            </span>
+            <span className={`text-sm md:text-md ${item.up ? "up" : "down"}`}>
+              {item.change}
+            </span>
+          </div>
+        ))}
       </div>
     </div>
   );

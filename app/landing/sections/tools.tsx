@@ -7,45 +7,45 @@ export default function Tools() {
       <div className="container mx-auto flex justify-center h-full items-center py-4 gap-4 md:gap-8 lg:gap-16 xl:gap-24 px-4 flex-wrap">
         <Link
           to={"/"}
-          className="font-normal cursor-pointer text-sm md:text-base text-secondary-text-color whitespace-nowrap hover:text-blue-600 transition-colors duration-300"
+          className="font-semibold cursor-pointer text-sm md:text-base text-secondary-text-color whitespace-nowrap hover:text-blue-100 transition-colors duration-300"
         >
-          Market
+          Thị trường
         </Link>
         <Link
           to={"/"}
-          className="font-normal cursor-pointer text-sm md:text-base text-secondary-text-color whitespace-nowrap hover:text-blue-600 transition-colors duration-300"
+          className="font-semibold cursor-pointer text-sm md:text-base text-secondary-text-color whitespace-nowrap hover:text-blue-100 transition-colors duration-300"
         >
-          Economy
+          Kinh tế vĩ mô
         </Link>
         <Link
           to={"/"}
-          className="font-normal cursor-pointer text-sm md:text-base text-secondary-text-color whitespace-nowrap hover:text-blue-600 transition-colors duration-300"
+          className="font-semibold cursor-pointer text-sm md:text-base text-secondary-text-color whitespace-nowrap hover:text-blue-100 transition-colors duration-300"
         >
-          Industrial
+          Tin ngành
         </Link>
         <Link
           to={"/"}
-          className="font-normal cursor-pointer text-sm md:text-base text-secondary-text-color whitespace-nowrap hover:text-blue-600 transition-colors duration-300"
+          className="font-semibold cursor-pointer text-sm md:text-base text-secondary-text-color whitespace-nowrap hover:text-blue-100 transition-colors duration-300"
         >
-          International
+          Quốc tế
         </Link>
         <Link
           to={"/"}
-          className="font-normal cursor-pointer text-sm md:text-base text-secondary-text-color whitespace-nowrap hidden sm:inline-block hover:text-blue-600"
+          className="font-semibold cursor-pointer text-sm md:text-base text-secondary-text-color whitespace-nowrap hidden sm:inline-block hover:text-blue-100"
         >
-          Policy
+          Chính sách
         </Link>
         <Link
           to={"/"}
-          className="font-normal cursor-pointer text-sm md:text-base text-secondary-text-color whitespace-nowrap hidden lg:inline-block"
+          className="font-semibold cursor-pointer text-sm md:text-base text-secondary-text-color whitespace-nowrap hidden lg:inline-block"
         >
-          Opinion
+          Phân tích
         </Link>
         <Link
           to={"/"}
-          className="font-normal cursor-pointer text-sm md:text-base text-secondary-text-color whitespace-nowrap hidden lg:inline-block"
+          className="font-semibold cursor-pointer text-sm md:text-base text-secondary-text-color whitespace-nowrap hidden lg:inline-block"
         >
-          Tools
+          Công cụ
         </Link>
       </div>
     </div>

@@ -31,9 +31,10 @@ export default function NavBar() {
       <div className="container mx-auto py-3 px-4 flex items-center justify-between bg-white">
         <Link
           to="/"
-          className="text-start my-auto font-bold inline-block cursor-pointer hover:opacity-70"
+          className="text-start  text-secondary-bg-color my-auto font-bold inline-flex flex-col cursor-pointer hover:opacity-70"
         >
           REAL TIME FINANCE
+          <span className="text-xs text-gray-500">TRANG THÔNG TIN</span>
         </Link>
 
         {/* full search: visible on md+ */}
@@ -41,7 +42,7 @@ export default function NavBar() {
           <div className="relative inline-block w-full">
             <Search className="w-5 h-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-main-text-color md:text-icon-color" />
             <input
-              className="w-full pl-10 pr-3 py-2 border rounded-xl border-main-text-color/20 focus:border-main-text-color/30 focus:border-2 focus:outline-none"
+              className="w-full pl-10 pr-3 py-2 border-2 rounded-full border-main-text-color/20 focus:border-main-text-color/30 focus:outline-none"
               type="text"
               placeholder="Tìm kiếm..."
               aria-label="Tìm kiếm"
@@ -61,14 +62,14 @@ export default function NavBar() {
                     onClick={() => setMobileMenuOpen(false)}
                     className="px-3 py-2 rounded hover:bg-gray-50"
                   >
-                    Sign In
+                    Đăng nhập
                   </Link>
                   <Link
                     to="/register"
                     onClick={() => setMobileMenuOpen(false)}
                     className="px-3 py-2 rounded hover:bg-gray-50"
                   >
-                    Sign Up
+                    Đăng ký
                   </Link>
                   <button
                     onClick={() => {
@@ -77,7 +78,7 @@ export default function NavBar() {
                     }}
                     className="px-3 py-2 text-left rounded hover:bg-gray-50"
                   >
-                    Language: {lang}
+                    Ngôn ngữ: {lang}
                   </button>
                 </div>
               </div>
@@ -113,32 +114,35 @@ export default function NavBar() {
             )}
           </div>
 
-          <Link
-            to="/login"
-            className="hidden md:inline-block hover:opacity-50 cursor-pointer"
+          {/* language button - first on desktop */}
+          <button
+            onClick={() => setLang((l) => (l === "VI" ? "EN" : "VI"))}
+            className="px-2 py-1 rounded-md hover:bg-gray-100 text-sm hidden md:inline-flex cursor-pointer"
+            aria-label="Chuyển ngôn ngữ"
           >
-            Sign In
-          </Link>
+            VI/EN
+          </button>
+
           <Link
             to="/register"
             className="hidden md:inline-block hover:opacity-50 cursor-pointer"
           >
-            Sign Up
+            Đăng ký
+          </Link>
+
+          <Link
+            to="/login"
+            className="hidden md:inline-block hover:opacity-50 cursor-pointer"
+          >
+            Đăng nhập
           </Link>
 
           <div className="flex items-center gap-3">
             <div className="cursor-pointer hover:opacity-70">
               <Bell />
             </div>
-            {/* language button placed next to bell */}
-            <button
-              onClick={() => setLang((l) => (l === "VI" ? "EN" : "VI"))}
-              className="px-2 py-1 rounded-md hover:bg-gray-100 text-sm hidden sm:inline-flex cursor-pointer"
-              aria-label="Toggle language"
-            >
-              {lang}
-            </button>
           </div>
+
           <button
             onClick={() => setMobileMenuOpen((v) => !v)}
             aria-label="Mở menu"
