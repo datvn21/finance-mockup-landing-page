@@ -12,7 +12,7 @@ const industries = [
 export default function OpinionAnalysis() {
   return (
     <section className="container mx-auto py-4 space-y-4 px-4 md:px-2">
-      <h2 className="text-lg hover:opacity-70 font-semibold text-warning-color dark:text-title-color mb-2 cursor-pointer">
+      <h2 className="text-lg hover:opacity-70 font-semibold text-warning-color  mb-2 cursor-pointer">
         BÌNH LUẬN & PHÂN TÍCH
       </h2>
 
@@ -20,16 +20,14 @@ export default function OpinionAnalysis() {
         {industries.map((item, i) => (
           <div
             key={i}
-            className="border-2 border-main-text-color/20 dark:border-gray-700 rounded-xl flex items-center gap-3 p-3 bg-node-bg-color dark:bg-node-bg-color cursor-pointer transition-all duration-300 hover:bg-main-bg-color/80 dark:hover:bg-gray-700"
+            className="border-2 border-main-text-color/20  rounded-xl flex items-center gap-3 p-3 bg-node-bg-color  cursor-pointer transition-all duration-300 hover:bg-main-bg-color/80 :bg-gray-700"
           >
-            <div className="aspect-video h-16 bg-main-text-color/20 dark:bg-gray-700 rounded-md flex-shrink-0" />
+            <div className="aspect-video h-16 bg-main-text-color/20  rounded-md flex-shrink-0" />
             <div>
-              <h3 className="font-medium text-sm transition-colors duration-300 hover:text-blue-600 dark:text-white dark:hover:text-blue-400">
+              <h3 className="font-medium text-sm transition-colors duration-300 hover:text-blue-600  :text-blue-400">
                 {item.title}
               </h3>
-              <p className="text-xs text-main-text-color/60 dark:text-gray-400">
-                {item.desc}
-              </p>
+              <p className="text-xs text-main-text-color/60 ">{item.desc}</p>
             </div>
           </div>
         ))}

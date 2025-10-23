@@ -31,7 +31,7 @@ export default function Highlight() {
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris.
               </p>
-              <p className="text-blue-600 dark:text-blue-400 text-sm font-semibold cursor-pointer transition-colors">
+              <p className="text-blue-600  text-sm font-semibold cursor-pointer transition-colors">
                 Xem thêm →
               </p>
             </div>
@@ -54,7 +54,7 @@ export default function Highlight() {
                     <img
                       src={item.img}
                       alt=""
-                      className="h-20 aspect-video object-cover rounded-lg flex-shrink-0 border border-main-text-color/20 dark:border-maintext-main-text-color/60"
+                      className="h-20 aspect-video object-cover rounded-lg flex-shrink-0 border border-main-text-color/20 /60"
                     />
                     <div className="flex-1">
                       <h4 className="font-semibold text-sm text-title-color mb-1 line-clamp-2 group-hover:text-blue-600 transition-colors">

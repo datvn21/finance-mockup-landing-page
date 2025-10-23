@@ -46,9 +46,9 @@ export default function CostUpdate() {
         {[...items, ...items].map((item, index) => (
           <div
             key={index}
-            className="flex flex-wrap justify-between min-w-[280px] border-r-2 border-main-text-color/20 dark:border-gray-700 pr-4 flex-shrink-0"
+            className="flex flex-wrap justify-between min-w-[280px] border-r-2 border-main-text-color/20  pr-4 flex-shrink-0"
           >
-            <span className="text-sm md:text-md dark:text-gray-300">
+            <span className="text-sm md:text-md ">
               {item.label} – {item.value} –{" "}
             </span>
             <span className={`text-sm md:text-md ${item.up ? "up" : "down"}`}>

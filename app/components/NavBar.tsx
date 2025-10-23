@@ -32,25 +32,23 @@ export default function NavBar({
   }, []);
 
   return (
-    <nav className="w-full bg-main-bg-color dark:bg-dark-main-text-color">
+    <nav className="w-full bg-main-bg-color">
       {/* changed container to flex for better responsive control */}
       <div className="container mx-auto py-3 px-4 flex items-center justify-between bg-main-bg-color">
         <Link
           to="/"
-          className="text-start text-nowrap text-secondary-bg-color dark:text-blue-400 my-auto font-bold inline-flex flex-col cursor-pointer select-none"
+          className="text-start text-nowrap text-secondary-bg-color my-auto font-bold inline-flex flex-col cursor-pointer select-none"
         >
           REAL TIME FINANCE
-          <span className="text-xs text-gray-500 dark:text-gray-400">
-            TRANG THÔNG TIN
-          </span>
+          <span className="text-xs text-gray-500">TRANG THÔNG TIN</span>
         </Link>
 
         {/* full search: visible on md+ */}
         <div className="hidden md:block flex-1 max-w-[480px] mx-6">
           <div className="relative inline-block w-full">
-            <Search className="w-5 h-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-main-text-color dark:text-gray-400 md:text-icon-color" />
+            <Search className="w-5 h-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-main-text-color md:text-icon-color" />
             <input
-              className="w-full pl-10 pr-3 py-2 border-2 rounded-full border-main-text-color/20 dark:border-gray-600 dark:bg-gray-800 dark:text-white focus:border-main-text-color/30 dark:focus:border-gray-500 focus:outline-none placeholder:text-main-text-color/60"
+              className="w-full pl-10 pr-3 py-2 border-2 rounded-full border-main-text-color/20 focus:border-main-text-color/30 focus:outline-none placeholder:text-main-text-color/60"
               type="text"
               placeholder="Tìm kiếm..."
               aria-label="Tìm kiếm"
@@ -63,19 +61,19 @@ export default function NavBar({
           {/* mobile menu button (shows Sign In / Sign Up on small screens) */}
           <div className="md:hidden" ref={mobileMenuRef}>
             {mobileMenuOpen && (
-              <div className="absolute right-4 top-full mt-2 w-44 bg-main-bg-color dark:bg-gray-800 border dark:border-gray-700 rounded-md shadow-md z-50">
+              <div className="absolute right-4 top-full mt-2 w-44 bg-main-bg-color border rounded-md shadow-md z-50">
                 <div className="flex flex-col p-2">
                   <Link
                     to="/login"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="px-3 py-2 rounded hover:bg-main-bg-color/80 dark:hover:bg-gray-700 dark:text-white"
+                    className="px-3 py-2 rounded hover:bg-main-bg-color/80"
                   >
                     Đăng nhập
                   </Link>
                   <Link
                     to="/register"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="px-3 py-2 rounded hover:bg-main-bg-color/80 dark:hover:bg-gray-700 dark:text-white"
+                    className="px-3 py-2 rounded hover:bg-main-bg-color/80"
                   >
                     Đăng ký
                   </Link>
@@ -84,7 +82,7 @@ export default function NavBar({
                       setLang((l) => (l === "VI" ? "EN" : "VI"));
                       setMobileMenuOpen(false);
                     }}
-                    className="px-3 py-2 text-left rounded hover:bg-main-bg-color/80 dark:hover:bg-gray-700 dark:text-white"
+                    className="px-3 py-2 text-left rounded hover:bg-main-bg-color/80"
                   >
                     Ngôn ngữ: {lang}
                   </button>
@@ -98,20 +96,20 @@ export default function NavBar({
             <button
               onClick={() => setSearchOpen((v) => !v)}
               aria-label="Mở tìm kiếm"
-              className="p-2 rounded-md  dark:hover:bg-gray-800"
+              className="p-2 rounded-md "
             >
-              <Search className="md:w-5 md:h-5 text-main-text-color dark:text-gray-400" />
+              <Search className="md:w-5 md:h-5 text-main-text-color " />
             </button>
 
             {/* mobile search dropdown */}
             {searchOpen && (
               <div className="absolute left-1/2 transform -translate-x-1/2 top-full mt-2 w-[90%] sm:w-80 z-50">
-                <div className="bg-main-bg-color dark:bg-gray-800 p-2 rounded-xl shadow-md">
+                <div className="bg-main-bg-color p-2 rounded-xl shadow-md">
                   <div className="relative">
-                    <Search className="w-4 h-4 absolute left-3 top-1/2 transform -translate-y-1/2 text-icon-color dark:text-gray-400" />
+                    <Search className="w-4 h-4 absolute left-3 top-1/2 transform -translate-y-1/2 text-icon-color " />
                     <input
                       autoFocus
-                      className="w-full pl-10 pr-3 py-2 border rounded-lg border-main-text-color/20 dark:border-gray-600 dark:bg-gray-700 dark:text-white focus:border-main-text-color/30 dark:focus:border-gray-500 focus:border-2 focus:outline-none placeholder:text-main-text-color/60"
+                      className="w-full pl-10 pr-3 py-2 border rounded-lg border-main-text-color/20 focus:border-main-text-color/30  focus:border-2 focus:outline-none placeholder:text-main-text-color/60"
                       type="text"
                       placeholder="Tìm kiếm..."
                       aria-label="Tìm kiếm"
@@ -125,7 +123,7 @@ export default function NavBar({
           {/* language button - first on desktop */}
           <button
             onClick={() => setLang((l) => (l === "VI" ? "EN" : "VI"))}
-            className="px-2 py-1 rounded-md  dark:hover:bg-gray-800 text-sm hidden md:inline-flex cursor-pointer dark:text-white"
+            className="px-2 py-1 rounded-md  text-sm hidden md:inline-flex cursor-pointer "
             aria-label="Chuyển ngôn ngữ"
           >
             VI/EN
@@ -133,21 +131,21 @@ export default function NavBar({
 
           <Link
             to="/register"
-            className="hidden md:inline-block hover:opacity-50 cursor-pointer dark:text-white"
+            className="hidden md:inline-block hover:opacity-50 cursor-pointer "
           >
             Đăng ký
           </Link>
 
           <Link
             to="/login"
-            className="hidden md:inline-block hover:opacity-50 cursor-pointer dark:text-white"
+            className="hidden md:inline-block hover:opacity-50 cursor-pointer "
           >
             Đăng nhập
           </Link>
 
           <div className="flex items-center gap-3">
             <div className="cursor-pointer hover:opacity-70">
-              <Bell className="dark:text-white w-6 h-6" />
+              <Bell className=" w-6 h-6" />
             </div>
           </div>
           {/* Dark/Light mode toggle */}
@@ -165,11 +163,11 @@ export default function NavBar({
           <button
             onClick={() => setMobileMenuOpen((v) => !v)}
             aria-label="Mở menu"
-            className="p-2 rounded-md md:hidden  dark:hover:bg-gray-800"
+            className="p-2 rounded-md md:hidden "
           >
             {/* simple hamburger */}
             <svg
-              className="w-6 h-6 dark:text-white"
+              className="w-6 h-6 "
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
