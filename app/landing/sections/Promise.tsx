@@ -7,8 +7,8 @@ export default function Promise() {
         DANH MỤC TRIỂN VỌNG
       </h2>
       <div className="w-full min-h-[200px] rounded-xl bg-main-bg-color dark:bg-gray-800 border-2 border-main-text-color/20 dark:border-gray-700 p-4">
-        <span className="text-xs dark:text-gray-300">
-          Mã Công ty Tỷ trọng YTD 1M Beta
+        <span className="text-sm dark:text-gray-300">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elits
         </span>
       </div>
     </section>

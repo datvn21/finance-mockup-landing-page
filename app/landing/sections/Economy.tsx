@@ -2,41 +2,41 @@ import React from "react";
 
 const macroNews = [
   {
-    title: "CPI dự báo 3.2% năm nay; giá lương thực hạ nhiệt",
-    desc: "Tóm tắt 1–2 dòng ngắn",
+    title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    desc: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
-    title: "GDP 2025 mục tiêu 6.5%; đầu tư công tiếp tục đẩy mạnh",
-    desc: "Tóm tắt 1–2 dòng ngắn",
+    title: "Ut enim ad minim veniam, quis nostrud exercitation ullamco",
+    desc: "Duis aute irure dolor in reprehenderit in voluptate velit esse.",
   },
   {
-    title: "Tín dụng tăng 1.2% m/m; lãi suất huy động ổn định",
-    desc: "Tóm tắt 1–2 dòng ngắn",
+    title: "Cillum dolore eu fugiat nulla pariatur excepteur sint occaecat",
+    desc: "Cupidatat non proident, sunt in culpa qui officia deserunt mollit.",
   },
   {
-    title: "Xuất khẩu tăng 7.8% y/y; thặng dư thương mại giữ vững",
-    desc: "Tóm tắt 1–2 dòng ngắn",
+    title: "Aliquip ex ea commodo consequat duis aute irure dolor",
+    desc: "Velit esse cillum dolore eu fugiat nulla pariatur.",
   },
   {
-    title: "Tỷ giá USD/VND dao động hẹp; NHNN hút ròng trên OMO",
-    desc: "Tóm tắt 1–2 dòng ngắn",
+    title: "Excepteur sint occaecat cupidatat non proident",
+    desc: "Sunt in culpa qui officia deserunt mollit anim id est laborum.",
   },
   {
-    title: "Giải ngân đầu tư công đạt 52% kế hoạch sau 8 tháng",
-    desc: "Tóm tắt 1–2 dòng ngắn",
+    title: "Tempor incididunt ut labore et dolore magna aliqua",
+    desc: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
   },
 ];
 
 const eventsVN = [
-  { date: "27/09", event: "CPI tháng 9", value: "3.2% y/y (khảo sát)" },
-  { date: "05/10", event: "Họp NHNN", value: "Giữ nguyên lãi suất" },
-  { date: "12/10", event: "Phát hành TPCP", value: "10Y: 2.35%" },
+  { date: "27/09", event: "Lorem ipsum event", value: "updating" },
+  { date: "05/10", event: "Consectetur meeting", value: "updating" },
+  { date: "12/10", event: "Sed do issuance", value: "updating" },
 ];
 
 const eventsGlobal = [
-  { date: "30/09", event: "PMI China", value: "50.2" },
-  { date: "04/10", event: "NFP US", value: "+175k, UR 3.9%" },
-  { date: "18/10", event: "CPI US", value: "+0.3% m/m" },
+  { date: "30/09", event: "Ut enim PMI", value: "updating" },
+  { date: "04/10", event: "Minim laboris report", value: "updating" },
+  { date: "18/10", event: "CPI dolor sit", value: "updating" },
 ];
 
 export default function Economy() {

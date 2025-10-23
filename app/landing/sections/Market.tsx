@@ -13,18 +13,24 @@ const SectionBox = ({ title }: { title: string }) => (
       <div className="flex-1 border-2 border-main-text-color/30 rounded-xl bg-main-bg-color dark:bg-gray-900 p-4 cursor-pointer transition-all duration-300 ">
         <div className="h-32 bg-main-text-color/20 rounded-lg mb-2" />
         <h3 className="font-semibold text-sm transition-colors duration-300 hover:text-blue-600  dark:hover:text-blue-400">
-          Thị trường tăng điểm mạnh trong phiên sáng
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit
         </h3>
         <p className="text-main-text-color/60 dark:text-gray-400 text-xs">
-          Dòng tiền chảy mạnh vào nhóm cổ phiếu vốn hóa lớn
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit
         </p>
       </div>
 
       {/* Tin phụ */}
       <div className="flex flex-col justify-start flex-shrink-0 w-full lg:w-1/3 space-y-3">
         {[
-          { title: "Thanh khoản cải thiện", desc: "Đạt 15,000 tỷ đồng" },
-          { title: "Khối ngoại mua ròng", desc: "+250 tỷ đồng" },
+          {
+            title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+            desc: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          },
+          {
+            title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+            desc: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          },
         ].map((item, i) => (
           <div
             key={i}

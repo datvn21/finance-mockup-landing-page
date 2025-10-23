@@ -147,7 +147,7 @@ export default function NavBar({
 
           <div className="flex items-center gap-3">
             <div className="cursor-pointer hover:opacity-70">
-              <Bell className="dark:text-white" />
+              <Bell className="dark:text-white w-6 h-6" />
             </div>
           </div>
           {/* Dark/Light mode toggle */}
