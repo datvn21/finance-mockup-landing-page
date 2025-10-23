@@ -41,18 +41,18 @@ const eventsGlobal = [
 
 export default function Economy() {
   return (
-    <section className="container mx-auto py-4 space-y-4 px-4 md:px-2 bg-node-bg-color">
+    <section className="container mx-auto py-4 space-y-4 px-4 md:px-2 bg-bg-bg-color">
       <h2 className="text-lg hover:opacity-70 font-semibold text-warning-color mb-2 cursor-pointer">
         KINH TẾ VĨ MÔ VIỆT NAM
       </h2>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
         {/* LEFT: Tin tức */}
-        <div className="lg:col-span-2 md:border-2 border-main-text-color/20  md:p-4 rounded-xl space-y-3 bg-main-bg-color ">
+        <div className="lg:col-span-2  rounded-xl space-y-3 ">
           {macroNews.map((item, i) => (
             <div
               key={i}
-              className="border-2 border-main-text-color/20 rounded-xl flex items-center gap-3 p-3 cursor-pointer transition-all duration-300 hover:bg-main-bg-color/80 "
+              className="border-2 border-main-text-color/20 bg-node-bg-color rounded-xl flex items-center gap-3 p-3 cursor-pointer transition-all duration-300 hover:bg-main-bg-color/80 "
             >
               <div className="aspect-video h-16 bg-main-text-color/20  rounded-md flex-shrink-0" />
               <div>
@@ -66,7 +66,7 @@ export default function Economy() {
         </div>
 
         {/* RIGHT: Lịch sự kiện */}
-        <div className="border-2 border-main-text-color/20  rounded-xl p-4 space-y-5 bg-main-bg-color ">
+        <div className="border-2 border-main-text-color/20  rounded-xl p-4 space-y-5 bg-node-bg-color ">
           {/* Trong nước */}
           <div>
             <h4 className="font-semibold text-lg hover:opacity-70 mb-2 ">

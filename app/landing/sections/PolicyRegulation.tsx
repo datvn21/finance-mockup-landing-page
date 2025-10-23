@@ -20,7 +20,7 @@ export default function PolicyRegulation() {
         {industries.map((item, i) => (
           <div
             key={i}
-            className="border-2 border-main-text-color/20  rounded-xl flex items-center gap-3 p-3 bg-main-bg-color  cursor-pointer transition-all duration-300 hover:bg-main-bg-color/80 :bg-gray-700"
+            className="border-2 border-main-text-color/20  rounded-xl flex items-center gap-3 p-3 bg-node-bg-color  cursor-pointer transition-all duration-300 hover:bg-main-bg-color/80 :bg-gray-700"
           >
             <div className="aspect-video h-16 bg-main-text-color/20  rounded-md flex-shrink-0" />
             <div>

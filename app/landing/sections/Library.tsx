@@ -20,7 +20,7 @@ export default function Library() {
         {industries.map((item, i) => (
           <div
             key={i}
-            className="border-2 border-main-text-color/20  cursor-pointer rounded-xl flex flex-col items-center gap-3 p-4 md:p-6 bg-main-bg-color  hover:bg-main-bg-color/80 :bg-gray-700 transition-all duration-300"
+            className="border-2 border-main-text-color/20  cursor-pointer rounded-xl flex flex-col items-center gap-3 p-4 md:p-6 bg-node-bg-color  hover:bg-main-bg-color/80 :bg-gray-700 transition-all duration-300"
           >
             <div className="h-[120px] w-full bg-main-text-color/20  rounded-md flex-shrink-0" />
             <div className="w-full text-start">

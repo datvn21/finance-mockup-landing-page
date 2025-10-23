@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router";
 const SectionBox = ({ title }: { title: string }) => (
-  <div className="border-2 border-main-text-color/30  rounded-xl p-4 space-y-3 bg-main-bg-color ">
+  <div className="border-2 border-main-text-color/30  rounded-xl p-4 space-y-3 bg-node-bg-color ">
     {/* Tiêu đề nhóm */}
     <div className="inline-block bg-main-text-color/10 border-main-text-color/30  text-main-text-color/70 text-sm font-medium px-3 py-1 rounded-md">
       {title}
@@ -10,7 +10,7 @@ const SectionBox = ({ title }: { title: string }) => (
     {/* Nội dung chính */}
     <div className="flex flex-col lg:flex-row gap-4">
       {/* Tin chính */}
-      <div className="flex-1 border-2 border-main-text-color/30 rounded-xl bg-main-bg-color  p-4 cursor-pointer transition-all duration-300 ">
+      <div className="flex-1 border-2 border-main-text-color/30 rounded-xl bg-node-bg-color  p-4 cursor-pointer transition-all duration-300 ">
         <div className="h-32 bg-main-text-color/20 rounded-lg mb-2" />
         <h3 className="font-semibold text-sm transition-colors duration-300 hover:text-blue-600  :text-blue-400">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit
@@ -34,7 +34,7 @@ const SectionBox = ({ title }: { title: string }) => (
         ].map((item, i) => (
           <div
             key={i}
-            className="border-2 border-main-text-color/30  rounded-xl flex items-center gap-2 p-2 cursor-pointer transition-all duration-300 hover:bg-main-bg-color/80 :bg-gray-700"
+            className="border-2 border-main-text-color/30  rounded-xl flex items-center gap-2 p-2 cursor-pointer transition-all duration-300 hover:bg-main-bg-color/80 "
           >
             <div className="w-12 h-12 rounded-md bg-main-text-color/20  flex-shrink-0" />
             <div className="text-xs">
@@ -60,7 +60,7 @@ export default function Market() {
       </div>
 
       {/* Nổi bật hôm nay */}
-      <div className="border-2 border-main-text-color/30  bg-main-bg-color  rounded-xl flex justify-between items-center px-4 py-3">
+      <div className="border-2 border-main-text-color/30  bg-node-bg-color  rounded-xl flex justify-between items-center px-4 py-3">
         <span className="font-medium ">Nổi bật hôm nay</span>
         <Link
           to={"/"}
