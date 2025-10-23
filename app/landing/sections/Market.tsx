@@ -54,7 +54,7 @@ export default function Market() {
   return (
     <div className="container mx-auto mt-8 flex flex-col gap-4 px-4 md:px-2">
       <div className="flex justify-between items-center">
-        <h2 className="text-lg cursor-pointer hover:opacity-70 font-semibold text-title-color  mb-2">
+        <h2 className="text-lg cursor-pointer hover:opacity-70 font-semibold text-secondary-bg-color  mb-2">
           THỊ TRƯỜNG
         </h2>
       </div>

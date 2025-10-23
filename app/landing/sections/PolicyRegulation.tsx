@@ -12,7 +12,7 @@ const industries = [
 export default function PolicyRegulation() {
   return (
     <section className="container mx-auto py-4 space-y-4 px-4 md:px-2">
-      <h2 className="text-lg hover:opacity-70 font-semibold text-title-color  mb-2 cursor-pointer">
+      <h2 className="text-lg hover:opacity-70 font-semibold text-secondary-bg-color  mb-2 cursor-pointer">
         CHÍNH SÁCH & QUY ĐỊNH
       </h2>
 
