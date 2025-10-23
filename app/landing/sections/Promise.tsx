@@ -6,7 +6,7 @@ export default function Promise() {
       <h2 className="text-lg hover:opacity-70 font-semibold text-warning-color dark:text-red-400 mb-2 cursor-pointer">
         DANH MỤC TRIỂN VỌNG
       </h2>
-      <div className="w-full min-h-[200px] rounded-xl bg-main-bg-color dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 p-4">
+      <div className="w-full min-h-[200px] rounded-xl bg-main-bg-color dark:bg-gray-800 border-2 border-main-text-color/20 dark:border-gray-700 p-4">
         <span className="text-xs dark:text-gray-300">
           Mã Công ty Tỷ trọng YTD 1M Beta
         </span>

@@ -32,12 +32,12 @@ export default function NavBar({
   }, []);
 
   return (
-    <nav className="w-full bg-main-bg-color dark:bg-dark-main-text-color relative transition-colors duration-300">
+    <nav className="w-full bg-main-bg-color dark:bg-dark-main-text-color">
       {/* changed container to flex for better responsive control */}
       <div className="container mx-auto py-3 px-4 flex items-center justify-between bg-main-bg-color">
         <Link
           to="/"
-          className="text-start text-nowrap text-secondary-bg-color dark:text-blue-400 my-auto font-bold inline-flex flex-col cursor-pointer hover:opacity-70"
+          className="text-start text-nowrap text-secondary-bg-color dark:text-blue-400 my-auto font-bold inline-flex flex-col cursor-pointer select-none"
         >
           REAL TIME FINANCE
           <span className="text-xs text-gray-500 dark:text-gray-400">
@@ -50,7 +50,7 @@ export default function NavBar({
           <div className="relative inline-block w-full">
             <Search className="w-5 h-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-main-text-color dark:text-gray-400 md:text-icon-color" />
             <input
-              className="w-full pl-10 pr-3 py-2 border-2 rounded-full border-main-text-color/20 dark:border-gray-600 dark:bg-gray-800 dark:text-white focus:border-main-text-color/30 dark:focus:border-gray-500 focus:outline-none"
+              className="w-full pl-10 pr-3 py-2 border-2 rounded-full border-main-text-color/20 dark:border-gray-600 dark:bg-gray-800 dark:text-white focus:border-main-text-color/30 dark:focus:border-gray-500 focus:outline-none placeholder:text-main-text-color/60"
               type="text"
               placeholder="Tìm kiếm..."
               aria-label="Tìm kiếm"
@@ -111,7 +111,7 @@ export default function NavBar({
                     <Search className="w-4 h-4 absolute left-3 top-1/2 transform -translate-y-1/2 text-icon-color dark:text-gray-400" />
                     <input
                       autoFocus
-                      className="w-full pl-10 pr-3 py-2 border rounded-lg border-main-text-color/20 dark:border-gray-600 dark:bg-gray-700 dark:text-white focus:border-main-text-color/30 dark:focus:border-gray-500 focus:border-2 focus:outline-none"
+                      className="w-full pl-10 pr-3 py-2 border rounded-lg border-main-text-color/20 dark:border-gray-600 dark:bg-gray-700 dark:text-white focus:border-main-text-color/30 dark:focus:border-gray-500 focus:border-2 focus:outline-none placeholder:text-main-text-color/60"
                       type="text"
                       placeholder="Tìm kiếm..."
                       aria-label="Tìm kiếm"
@@ -156,7 +156,7 @@ export default function NavBar({
             className="p-2 rounded-md hover:bg-main-bg-color/80 inline-flex cursor-pointer"
             aria-label="Chuyển chế độ hiển thị"
           >
-            {darkMode ? (
+            {!darkMode ? (
               <Sun className=" text-main-text-color" />
             ) : (
               <Moon className=" text-main-text-color" />
