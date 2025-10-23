@@ -15,7 +15,9 @@ body {
 }
 @theme light {
   --color-main-bg-color: #fbfbfb;
+  --color-node-bg-color: #fbfbfb;
   --color-main-text-color: #000000;
+  --color-title-color: #fbfbfb;
   --color-warning-color: #dc2626;
   --color-success-color: #16a34a;
   --color-secondary-bg-color: #123e8a;
@@ -25,6 +27,8 @@ body {
 
 .dark {
   --color-main-bg-color: #202225;
+  --color-node-bg-color: #23262d;
+  --color-title-color: #123e8a;
   --color-main-text-color: #fbfbfb;
 }
 

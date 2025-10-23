@@ -14,7 +14,7 @@ export default function Highlight() {
       <div className="grid lg:grid-cols-3 gap-6 mb-6">
         {/* Top Story Section - Takes 2 columns */}
         <div className="lg:col-span-2 ">
-          <section className="bg-main-bg-color rounded-xl border-2 border-main-text-color/20 overflow-hidden transition-colors h-full cursor-pointer hover:bg-main-bg-color/80 group">
+          <section className="bg-node-bg-color rounded-xl border-2 border-main-text-color/20 overflow-hidden transition-colors h-full cursor-pointer hover:bg-main-bg-color/80 group">
             <div className="px-6 pt-6">
               <img
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkZXmghOOesxzSaFMXaLH0J6ZltDmafBAIQw&s"
@@ -23,7 +23,7 @@ export default function Highlight() {
               />
             </div>
             <div className="p-6 md:p-8">
-              <h2 className="text-xl md:text-2xl font-bold text-main-text-color mb-4 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+              <h2 className="text-xl md:text-2xl font-bold text-title-color mb-4 group-hover:text-blue-600  transition-colors">
                 Lorem ipsum dolor sit amet consectetur adipiscing elit
               </h2>
               <p className="text-main-text-color/60 mb-6 text-base md:text-lg leading-relaxed line-clamp-3">
@@ -40,7 +40,7 @@ export default function Highlight() {
 
         {/* Secondary News Section - Takes 1 column */}
         <aside className="lg:col-span-1">
-          <div className="bg-main-bg-color rounded-xl border-2 border-main-text-color/20 p-4 md:p-6 h-full">
+          <div className="bg-node-bg-color rounded-xl border-2 border-main-text-color/20 p-4 md:p-6 h-full">
             <p className="text-sm font-bold text-main-text-color/70  pb-3">
               SECONDARY • 1–5
             </p>
@@ -57,7 +57,7 @@ export default function Highlight() {
                       className="h-20 aspect-video object-cover rounded-lg flex-shrink-0 border border-main-text-color/20 dark:border-maintext-main-text-color/60"
                     />
                     <div className="flex-1">
-                      <h4 className="font-semibold text-sm  mb-1 line-clamp-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                      <h4 className="font-semibold text-sm text-title-color mb-1 line-clamp-2 group-hover:text-blue-600 transition-colors">
                         {item.title}
                       </h4>
                       <p className="text-xs text-main-text-color/60 line-clamp-2">
@@ -79,16 +79,16 @@ export default function Highlight() {
             {newsItems.slice(0, 6).map((item, i) => (
               <div
                 key={i}
-                className="bg-main-bg-color rounded-xl md:border-2 border-main-text-color/20 overflow-hidden transition-colors cursor-pointer hover:bg-main-bg-color/80  group"
+                className="bg-node-bg-color rounded-xl border-2 border-main-text-color/20 overflow-hidden transition-colors cursor-pointer hover:bg-main-bg-color/80  group"
               >
-                <div className="pl-2 md:p-4 flex gap-4">
+                <div className="p-4 flex gap-4">
                   <img
                     src={item.img}
                     alt=""
                     className="aspect-video h-20 md:h-28 object-cover rounded-lg flex-shrink-0"
                   />
                   <div className="flex-1 flex flex-col justify-center">
-                    <h4 className="font-semibold text-md  mb-2 line-clamp-2 md:line-clamp-4 group-hover:text-blue-600  transition-colors">
+                    <h4 className="font-semibold text-md text-title-color mb-2 line-clamp-2 md:line-clamp-4 group-hover:text-blue-600  transition-colors">
                       {item.title}
                     </h4>
                     <p className="text-xs md:text-sm text-main-text-color/60 mb-2 line-clamp-2 md:line-clamp-3">
