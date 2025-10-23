@@ -12,7 +12,7 @@ const industries = [
 export default function International() {
   return (
     <section className="container mx-auto py-4 space-y-4 px-4 md:px-2">
-      <h2 className="text-lg hover:opacity-70 font-semibold text-warning-color dark:text-red-400 mb-2 cursor-pointer">
+      <h2 className="text-lg hover:opacity-70 font-semibold text-warning-color dark:text-title-color mb-2 cursor-pointer">
         TIN TỨC QUỐC TẾ
       </h2>
 
@@ -20,7 +20,7 @@ export default function International() {
         {industries.map((item, i) => (
           <div
             key={i}
-            className="border-2 border-main-text-color/20 dark:border-gray-700 rounded-xl flex items-center gap-3 p-3 bg-main-bg-color dark:bg-gray-800 cursor-pointer transition-all duration-300 hover:bg-main-bg-color/80 dark:hover:bg-gray-700"
+            className="border-2 border-main-text-color/20 dark:bg-node-bg-color rounded-xl flex items-center gap-3 p-3 bg-main-bg-color dark:bg-gray-800 cursor-pointer transition-all duration-300 hover:bg-main-bg-color/80 dark:hover:bg-gray-700"
           >
             <div className="aspect-video h-16 bg-main-text-color/20 dark:bg-gray-700 rounded-md flex-shrink-0" />
             <div>

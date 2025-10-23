@@ -41,14 +41,14 @@ const eventsGlobal = [
 
 export default function Economy() {
   return (
-    <section className="container mx-auto py-4 space-y-4 px-4 md:px-2">
-      <h2 className="text-lg hover:opacity-70 font-semibold text-warning-color dark:text-red-400 mb-2 cursor-pointer">
+    <section className="container mx-auto py-4 space-y-4 px-4 md:px-2 bg-node-bg-color">
+      <h2 className="text-lg hover:opacity-70 font-semibold text-warning-color dark:text-title-color mb-2 cursor-pointer">
         KINH TẾ VĨ MÔ VIỆT NAM
       </h2>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
         {/* LEFT: Tin tức */}
-        <div className="lg:col-span-2 md:border-2 border-main-text-color/20 dark:border-gray-700 md:p-4 rounded-xl space-y-3 bg-main-bg-color dark:bg-gray-800">
+        <div className="lg:col-span-2 md:border-2 border-main-text-color/20 dark:bg-node-bg-color  md:p-4 rounded-xl space-y-3 bg-main-bg-color dark:bg-gray-800">
           {macroNews.map((item, i) => (
             <div
               key={i}
@@ -68,7 +68,7 @@ export default function Economy() {
         </div>
 
         {/* RIGHT: Lịch sự kiện */}
-        <div className="border-2 border-main-text-color/20 dark:border-gray-700 rounded-xl p-4 space-y-5 bg-main-bg-color dark:bg-gray-800">
+        <div className="border-2 border-main-text-color/20 dark:border-gray-700 rounded-xl p-4 space-y-5 bg-main-bg-color dark:bg-node-bg-color">
           {/* Trong nước */}
           <div>
             <h4 className="font-semibold text-lg hover:opacity-70 mb-2 dark:text-white">
