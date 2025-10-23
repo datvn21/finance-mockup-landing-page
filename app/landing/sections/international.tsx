@@ -12,7 +12,7 @@ const industries = [
 export default function International() {
   return (
     <section className="container mx-auto py-4 space-y-4 px-4 md:px-2">
-      <h2 className="text-lg hover:opacity-70 font-semibold text-warning-color  mb-2 cursor-pointer">
+      <h2 className="text-lg hover:opacity-70 font-semibold text-title-color  mb-2 cursor-pointer">
         TIN TỨC QUỐC TẾ
       </h2>
 
@@ -24,7 +24,7 @@ export default function International() {
           >
             <div className="aspect-video h-16 bg-main-text-color/20  rounded-md flex-shrink-0" />
             <div>
-              <h3 className="font-medium text-sm transition-colors duration-300 hover:text-blue-600  :text-blue-400">
+              <h3 className="font-medium text-sm transition-colors duration-300 hover:text-title-color/80  text-title-color">
                 {item.title}
               </h3>
               <p className="text-xs text-main-text-color/60 ">{item.desc}</p>

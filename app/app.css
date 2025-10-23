@@ -21,6 +21,7 @@ body {
   --color-warning-color: #dc2626;
   --color-success-color: #16a34a;
   --color-secondary-bg-color: #123e8a;
+  --color-footer-bg-color: #123e8a;
   --color-secondary-text-color: #ffffff;
   --color-icon-color: #a0a4ac;
 }
@@ -29,6 +30,7 @@ body {
   --color-main-bg-color: #202225;
   --color-node-bg-color: #23262d;
   --color-title-color: #123e8a;
+  --color-footer-bg-color: #2d3036;
   --color-main-text-color: #fbfbfb;
 }
 

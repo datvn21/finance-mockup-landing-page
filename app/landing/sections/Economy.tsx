@@ -42,7 +42,7 @@ const eventsGlobal = [
 export default function Economy() {
   return (
     <section className="container mx-auto py-4 space-y-4 px-4 md:px-2 bg-bg-bg-color">
-      <h2 className="text-lg hover:opacity-70 font-semibold text-warning-color mb-2 cursor-pointer">
+      <h2 className="text-lg hover:opacity-70 font-semibold text-title-color mb-2 cursor-pointer">
         KINH TẾ VĨ MÔ VIỆT NAM
       </h2>
 
@@ -56,7 +56,7 @@ export default function Economy() {
             >
               <div className="aspect-video h-16 bg-main-text-color/20  rounded-md flex-shrink-0" />
               <div>
-                <h3 className="font-medium text-sm transition-colors duration-300 hover:text-blue-600">
+                <h3 className="font-medium text-sm transition-colors duration-300 text-title-color">
                   {item.title}
                 </h3>
                 <p className="text-xs text-main-text-color/60 ">{item.desc}</p>

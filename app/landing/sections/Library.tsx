@@ -12,7 +12,7 @@ const industries = [
 export default function Library() {
   return (
     <section className="container mx-auto py-4 space-y-4 px-4 md:px-2">
-      <h2 className="text-lg hover:opacity-70 font-semibold text-warning-color mb-2 cursor-pointer ">
+      <h2 className="text-lg hover:opacity-70 font-semibold text-title-color mb-2 cursor-pointer ">
         THƯ VIỆN KIẾN THỨC
       </h2>
 
@@ -24,7 +24,9 @@ export default function Library() {
           >
             <div className="h-[120px] w-full bg-main-text-color/20  rounded-md flex-shrink-0" />
             <div className="w-full text-start">
-              <h3 className="font-medium text-sm ">{item.title}</h3>
+              <h3 className="font-medium text-sm text-title-color">
+                {item.title}
+              </h3>
               <p className="text-xs text-main-text-color/60 ">{item.desc}</p>
             </div>
           </div>
