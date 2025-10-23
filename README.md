@@ -51,15 +51,15 @@ To build and run using Docker:
 ```bash
 docker build -t my-app .
 
-# Run the container
+# Run the container  sm:px-8
 docker run -p 3000:3000 my-app
 ```
 
-The containerized application can be deployed to any platform that supports Docker, including:
+The container sm:px-8 ized application can be deployed to any platform that supports Docker, including:
 
 - AWS ECS
 - Google Cloud Run
-- Azure Container Apps
+- Azure container sm:px-8 Apps
 - Digital Ocean App Platform
 - Fly.io
 - Railway

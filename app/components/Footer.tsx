@@ -4,7 +4,7 @@ import { Link } from "react-router";
 export default function Footer() {
   return (
     <footer className="w-screen bg-footer-bg-color text-gray-200">
-      <div className="container mx-auto px-8 md:px-16 py-8 max-w-5xl">
+      <div className="container  sm:px-8  mx-auto px-8 md:px-16 py-8 max-w-5xl">
         <div className="flex flex-col sm:flex-row sm:justify-between items-start gap-6">
           {/* Links */}
           <nav className="flex gap-6">

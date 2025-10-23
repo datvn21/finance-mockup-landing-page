@@ -33,8 +33,8 @@ export default function NavBar({
 
   return (
     <nav className="w-full bg-main-bg-color">
-      {/* changed container to flex for better responsive control */}
-      <div className="container mx-auto py-3 px-4 flex items-center justify-between bg-main-bg-color">
+      {/* changed container  sm:px-8  to flex for better responsive control */}
+      <div className="container  sm:px-8  mx-auto py-3 px-4 flex items-center justify-between bg-main-bg-color">
         <Link
           to="/"
           className="text-start text-nowrap text-secondary-bg-color my-auto font-bold inline-flex flex-col cursor-pointer select-none"

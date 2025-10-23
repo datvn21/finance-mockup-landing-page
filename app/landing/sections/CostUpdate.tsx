@@ -14,8 +14,8 @@ export default function CostUpdate() {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const scrollContainer = scrollRef.current;
-    if (!scrollContainer) return;
+    const scrollcontainer = scrollRef.current;
+    if (!scrollcontainer) return;
 
     let animationId: number;
     let scrollPosition = 0;
@@ -23,11 +23,11 @@ export default function CostUpdate() {
     const scroll = () => {
       scrollPosition += 0.5;
 
-      if (scrollPosition >= scrollContainer.scrollWidth / 2) {
+      if (scrollPosition >= scrollcontainer.scrollWidth / 2) {
         scrollPosition = 0;
       }
 
-      scrollContainer.scrollLeft = scrollPosition;
+      scrollcontainer.scrollLeft = scrollPosition;
       animationId = requestAnimationFrame(scroll);
     };
 
@@ -40,7 +40,7 @@ export default function CostUpdate() {
     <div className="w-full bg-main-bg-color/50 overflow-hidden ">
       <div
         ref={scrollRef}
-        className="container mx-auto flex items-center py-2 px-2 md:px-2 gap-8 overflow-x-hidden"
+        className="container  sm:px-8  mx-auto flex items-center py-2 px-2 md:px-8 gap-8 overflow-x-hidden"
         style={{ scrollBehavior: "auto" }}
       >
         {[...items, ...items].map((item, index) => (

@@ -11,7 +11,7 @@ const industries = [
 
 export default function International() {
   return (
-    <section className="container mx-auto py-4 space-y-4 px-4 md:px-2">
+    <section className="container  sm:px-8  mx-auto py-4 space-y-4 px-4 md:px-8">
       <h2 className="text-lg hover:opacity-70 font-semibold text-secondary-bg-color  mb-2 cursor-pointer">
         TIN TỨC QUỐC TẾ
       </h2>

@@ -9,7 +9,7 @@ const newsItems = Array(10).fill({
 
 export default function Highlight() {
   return (
-    <div className="container mx-auto pt-12 px-4 md:px-0">
+    <div className="container sm:px-8 mx-auto pt-12 px-4">
       {/* Top Story & Secondary News - Side by Side */}
       <div className="grid lg:grid-cols-3 gap-6 mb-6">
         {/* Top Story Section - Takes 2 columns */}
