@@ -22,19 +22,19 @@ export default function Tools() {
           to={"/"}
           className="font-semibold cursor-pointer text-sm md:text-base text-secondary-text-color  whitespace-nowrap hover:text-blue-100 :text-blue-400 transition-colors duration-300"
         >
-          Kinh tế vĩ mô
-        </Link>
-        <Link
-          to={"/"}
-          className="font-semibold cursor-pointer text-sm md:text-base text-secondary-text-color  whitespace-nowrap hover:text-blue-100 :text-blue-400 transition-colors duration-300"
-        >
-          Tin ngành
+          Kinh tế
         </Link>
         <Link
           to={"/"}
           className="font-semibold cursor-pointer text-sm md:text-base text-secondary-text-color  whitespace-nowrap hover:text-blue-100 :text-blue-400 transition-colors duration-300 hidden md:inline-block"
         >
-          Quốc tế
+          Ngành
+        </Link>
+        <Link
+          to={"/"}
+          className="font-semibold cursor-pointer text-sm md:text-base text-secondary-text-color  whitespace-nowrap hover:text-blue-100  :text-blue-400 transition-colors duration-300 hidden lg:inline-block"
+        >
+          Thế giới
         </Link>
         <Link
           to={"/"}
@@ -46,7 +46,13 @@ export default function Tools() {
           to={"/"}
           className="font-semibold cursor-pointer text-sm md:text-base text-secondary-text-color  whitespace-nowrap hidden lg:inline-block hover:text-blue-100 :text-blue-400"
         >
-          Phân tích
+          Ý kiến
+        </Link>
+        <Link
+          to={"/"}
+          className="font-semibold cursor-pointer text-sm md:text-base text-secondary-text-color  whitespace-nowrap inline-block hover:text-blue-100 :text-blue-400"
+        >
+          Thêm
         </Link>
       </div>
     </div>

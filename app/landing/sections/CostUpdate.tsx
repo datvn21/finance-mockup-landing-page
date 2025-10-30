@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 
 const items = [
   { label: "VNINDEX", value: "1,301.24", change: "+1.02%", up: true },
-  { label: "USD/VND", value: "24,560", change: "-0.02%", up: true },
+  { label: "USD/VND", value: "24,560", change: "-0.02%", up: false },
   { label: "GOLD", value: "2,365.40", change: "+0.12%", up: true },
   { label: "WTI", value: "78.21", change: "-0.27%", up: false },
   { label: "BTC/USD", value: "43,250", change: "+2.15%", up: true },
@@ -46,10 +46,30 @@ export default function CostUpdate() {
         {[...items, ...items].map((item, index) => (
           <div
             key={index}
-            className="flex flex-wrap justify-between min-w-[280px] border-r-2 border-main-text-color/20  pr-4 flex-shrink-0"
+            className="flex flex-wrap min-w-[200px] space-x-1 flex-shrink-0"
           >
+            <div>
+              {item.up ? (
+                <div
+                  className="w-0 h-0
+                        border-l-[8px] border-l-transparent
+                        border-r-[8px] border-r-transparent
+                        border-b-[16px] border-b-success-color up"
+                />
+              ) : (
+                <div
+                  className="w-0 h-0
+                        border-l-[8px] border-l-transparent
+                        border-r-[8px] border-r-transparent
+                        border-t-[16px] border-t-warning-color down"
+                />
+              )}
+            </div>
             <span className="text-sm md:text-md ">
-              {item.label} – {item.value} –{" "}
+              <strong className="text-main-text-color/80">{item.label}</strong>
+            </span>
+            <span className="text-sm md:text-md text-main-text-color/80">
+              {item.value}
             </span>
             <span className={`text-sm md:text-md ${item.up ? "up" : "down"}`}>
               {item.change}

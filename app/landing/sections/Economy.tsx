@@ -28,15 +28,15 @@ const macroNews = [
 ];
 
 const eventsVN = [
-  { date: "27/09", event: "Lorem ipsum event", value: "updating" },
-  { date: "05/10", event: "Consectetur meeting", value: "updating" },
-  { date: "12/10", event: "Sed do issuance", value: "updating" },
+  { date: "27/09", event: "Lorem ipsum event", value: "đang cập nhật" },
+  { date: "05/10", event: "Consectetur meeting", value: "đang cập nhật" },
+  { date: "12/10", event: "Sed do issuance", value: "đang cập nhật" },
 ];
 
 const eventsGlobal = [
-  { date: "30/09", event: "Ut enim PMI", value: "updating" },
-  { date: "04/10", event: "Minim laboris report", value: "updating" },
-  { date: "18/10", event: "CPI dolor sit", value: "updating" },
+  { date: "30/09", event: "Ut enim PMI", value: "đang cập nhật" },
+  { date: "04/10", event: "Minim laboris report", value: "đang cập nhật" },
+  { date: "18/10", event: "CPI dolor sit", value: "đang cập nhật" },
 ];
 
 export default function Economy() {
