@@ -81,7 +81,7 @@ export default function NavBar({
           {/* mobile menu button (shows Sign In / Sign Up on small screens) */}
           <div className="md:hidden" ref={mobileMenuRef}>
             {mobileMenuOpen && (
-              <div className="absolute right-4 top-full mt-2 w-44 bg-main-bg-color border rounded-md shadow-md z-50">
+              <div className="absolute right-4 top-14 mt-2 w-44 bg-main-bg-color border rounded-md shadow-md z-[99]">
                 <div className="flex flex-col p-2">
                   <Link
                     to="/login"
