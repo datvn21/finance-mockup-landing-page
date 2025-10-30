@@ -42,7 +42,7 @@ export default function Highlight() {
         <aside className="lg:col-span-1">
           <div className="bg-node-bg-color rounded-xl border-2 border-main-text-color/20 p-4 md:p-6 h-full">
             <p className="text-sm font-bold text-main-text-color/70  pb-3">
-              SECONDARY • 1–5
+              Secondary • 1–5
             </p>
             <div className="space-y-4">
               {newsItems.slice(0, 5).map((item, i) => (

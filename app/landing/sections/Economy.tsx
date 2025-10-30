@@ -43,7 +43,7 @@ export default function Economy() {
   return (
     <section className="container  sm:px-8  mx-auto py-4 space-y-4 px-4 8 bg-bg-bg-color">
       <h2 className="text-lg hover:opacity-70 font-semibold text-secondary-bg-color mb-2 cursor-pointer">
-        KINH TẾ VĨ MÔ VIỆT NAM
+        Kinh tế
       </h2>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
