@@ -2,25 +2,29 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Facebook, Instagram, Youtube } from "lucide-react";
 import React from "react";
 import { Link } from "react-router";
+import { useLanguage } from "~/i18n/LanguageContext";
 
 export default function Footer() {
+  const { t, language } = useLanguage();
+  const basePath = language === "vi" ? "/" : `/${language}`;
+
   return (
     <footer className="w-full bg-footer-bg-color text-gray-200">
       <div className="container mx-auto sm:px-8">
         <div className="w-full sm:px-0 px-4 flex md:flex-row flex-col gap-4 md:gap-0 flex-wrap justify-between py-4">
           <div>
             <Link
-              to="/"
+              to={basePath}
               className="text-start text-nowrap text-xl md:text-2xl my-auto font-bold inline-flex flex-col cursor-pointer select-none"
             >
-              REAL TIME FINANCE
+              {t("siteName")}
               <span className="text-xs text-gray-400">
-                TRANG THÔNG TIN ĐIỆN TỬ TỔNG HỢP
+                {t("siteDescriptionFull")}
               </span>
             </Link>
           </div>
           <div className="flex flex-col md:items-end gap-1">
-            <span className="text-sm">Theo dõi chúng tôi</span>
+            <span className="text-sm">{t("followUs")}</span>
             <ul className="flex gap-4 items-center">
               <li className="cursor-pointer">
                 <svg
@@ -74,88 +78,78 @@ export default function Footer() {
         <div className="border-t border-x pb-8 border-gray-400/50">
           <div className=" px-4 flex flex-col flex-wrap md:flex-row justify-between md:space-y-4">
             <div className="py-4">
-              <span className="font-bold">Chuyên mục</span>
+              <span className="font-bold">{t("categories")}</span>
               <div>
                 <ul className="grid grid-cols-3 gap-4 mt-4 space-x-4">
                   <li className="cursor-pointer hover:underline text-white/80">
-                    Kinh tế
+                    {t("economy")}
                   </li>
                   <li className="cursor-pointer hover:underline text-white/80">
-                    Ngành
+                    {t("industry")}
                   </li>
                   <li className="cursor-pointer hover:underline text-white/80">
-                    Thế giới
+                    {t("world")}
                   </li>
                   <li className="cursor-pointer hover:underline text-white/80">
-                    Chính sách
+                    {t("policy")}
                   </li>
                   <li className="cursor-pointer hover:underline text-white/80">
-                    Góc nhìn
+                    {t("perspective")}
                   </li>
                   <li className="cursor-pointer hover:underline text-white/80">
-                    Thư viện
+                    {t("libraryShort")}
                   </li>
                 </ul>
               </div>
             </div>
             <div className="flex-1 hidden h-full border-l-gray-400/50 py-4 pl-4">
-              <span className="font-bold">Truy cập nhanh</span>
+              <span className="font-bold">{t("quickAccess")}</span>
               <div>
                 <ul className="grid grid-cols-2 w-fit gap-4 mt-4 space-x-4">
                   <li className="cursor-pointer hover:underline text-white/80">
-                    Hỗ trợ
+                    {t("support")}
                   </li>
                   <li className="cursor-pointer hover:underline text-white/80">
-                    Về chúng tôi
+                    {t("aboutUs")}
                   </li>
                   <li className="cursor-pointer hover:underline text-white/80">
-                    Tuyển dụng
+                    {t("careers")}
                   </li>
                   <li className="cursor-pointer hover:underline text-white/80">
-                    Chính sách
+                    {t("policies")}
                   </li>
                 </ul>
               </div>
             </div>
             <div className="flex flex-col gap-4 md:items-end py-4">
-              <span className="font-bold">Liên hệ</span>
+              <span className="font-bold">{t("contact")}</span>
               <button className="px-4 py-2 cursor-pointer text-xs border-white rounded-md border">
-                Hợp tác quảng cáo
+                {t("adPartnership")}
               </button>
               <p className="text-xs md:text-right">
-                Chăm sóc khách hàng: 0xxxxxxxxx
+                {t("customerCare")}: 0xxxxxxxxx
                 <br />
-                Email: xxx@rtf.vn
+                {t("email")}: xxx@rtf.vn
               </p>
             </div>
           </div>
           <div className="px-4 border-t py-4 grid grid-cols-1 gap-4 md:gap-0 md:grid-cols-2 border-gray-400/50">
             <div className="text-sm text-white/80 space-y-1">
-              <p>
-                Giấy phép thiết lập trang thông tin điện tử tổng hợp trên mạng
-                số …….. do Sở Thông Tin và Truyền Thông thành phố Hồ Chí Minh
-                cấp ngày. tháng. năm
-              </p>
-              <p>Chịu trách nhiệm nội dung: Bà Đinh Hạ Vân</p>
-              <p>
-                Trụ sở: AB04.01, Khu AB, Tầng 4, Khu thương mại dịch vụ căn hộ
-                cao tầng, số 58B Nguyễn Thị Thập, Phường Bình Thuận, Quận 7,
-                Thành phố Hồ Chí Minh, Việt Nam
-              </p>
-              <p> Điện thoại: 0388.681001</p>
+              <p>{t("licenseInfo")}</p>
+              <p>{t("responsiblePerson")}</p>
+              <p>{t("address")}</p>
+              <p> {t("phone")}: 0388.681001</p>
             </div>
             <div className="flex md:items-end flex-col gap-2 text-white/80">
               <div className="flex flex-wrap gap-4 text-sm underline">
                 <p className="hover:underline-offset-2 cursor-pointer">
-                  Điều kiện và điều khoản sử dụng
+                  {t("termsConditions")}
                 </p>
                 <p className="hover:underline-offset-2 cursor-pointer">
-                  Chính sách bảo mật
+                  {t("privacyPolicy")}
                 </p>
               </div>
-              <p className="text-sm">
-                © Copyright 2025-2025 Công ty Cổ phần ......
-              </p>
+              <p className="text-sm">{t("copyright")}</p>
             </div>
           </div>
         </div>

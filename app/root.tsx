@@ -5,13 +5,16 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useLocation,
 } from "react-router";
 
 import type { Route } from "./+types/root";
 import "./app.css";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
-import { useState } from "react";
+import { useState, useMemo } from "react";
+import { LanguageProvider } from "./i18n/LanguageContext";
+import type { Language } from "./i18n/translations";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -28,8 +31,18 @@ export const links: Route.LinksFunction = () => [
 
 export function Layout({ children }: { children: React.ReactNode }) {
   const [darkMode, setDarkMode] = useState(false);
+  const location = useLocation();
+
+  // Determine language from URL path
+  const language: Language = useMemo(() => {
+    const path = location.pathname;
+    if (path.startsWith("/en")) return "en";
+    if (path.startsWith("/vi")) return "vi";
+    return "vi"; // default to Vietnamese
+  }, [location.pathname]);
+
   return (
-    <html className={darkMode ? "dark" : ""} lang="en">
+    <html className={darkMode ? "dark" : ""} lang={language}>
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -37,11 +50,13 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body className="flex flex-col min-h-screen overflow-x-hidden bg-main-bg-color">
-        <NavBar setDarkMode={setDarkMode} darkMode={darkMode} />
-        {children}
-        <ScrollRestoration />
-        <Scripts />
-        <Footer />
+        <LanguageProvider language={language}>
+          <NavBar setDarkMode={setDarkMode} darkMode={darkMode} />
+          {children}
+          <ScrollRestoration />
+          <Scripts />
+          <Footer />
+        </LanguageProvider>
       </body>
     </html>
   );

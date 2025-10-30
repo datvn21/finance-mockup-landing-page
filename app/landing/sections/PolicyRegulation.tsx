@@ -1,19 +1,22 @@
 import React from "react";
-
-const industries = [
-  { title: "Chính sách mới", desc: "Tóm tắt nội dung 1–2 dòng" },
-  { title: "Chính sách mới", desc: "Tóm tắt nội dung 1–2 dòng" },
-  { title: "Chính sách mới", desc: "Tóm tắt nội dung 1–2 dòng" },
-  { title: "Chính sách mới", desc: "Tóm tắt nội dung 1–2 dòng" },
-  { title: "Chính sách mới", desc: "Tóm tắt nội dung 1–2 dòng" },
-  { title: "Chính sách mới", desc: "Tóm tắt nội dung 1–2 dòng" },
-];
+import { useLanguage } from "~/i18n/LanguageContext";
 
 export default function PolicyRegulation() {
+  const { t } = useLanguage();
+
+  const industries = [
+    { title: t("policyNewsTitle"), desc: t("industryNewsDesc") },
+    { title: t("policyNewsTitle"), desc: t("industryNewsDesc") },
+    { title: t("policyNewsTitle"), desc: t("industryNewsDesc") },
+    { title: t("policyNewsTitle"), desc: t("industryNewsDesc") },
+    { title: t("policyNewsTitle"), desc: t("industryNewsDesc") },
+    { title: t("policyNewsTitle"), desc: t("industryNewsDesc") },
+  ];
+
   return (
     <section className="container  sm:px-8  mx-auto py-4 space-y-4 px-4 md:px-8">
       <h2 className="text-lg hover:opacity-70 font-semibold text-secondary-bg-color  mb-2 cursor-pointer">
-        Chính sách
+        {t("policyTitle")}
       </h2>
 
       <div className="grid grid-cols-1  gap-4">

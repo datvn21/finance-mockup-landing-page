@@ -1,49 +1,51 @@
 import React from "react";
-
-const macroNews = [
-  {
-    title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    desc: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  },
-  {
-    title: "Ut enim ad minim veniam, quis nostrud exercitation ullamco",
-    desc: "Duis aute irure dolor in reprehenderit in voluptate velit esse.",
-  },
-  {
-    title: "Cillum dolore eu fugiat nulla pariatur excepteur sint occaecat",
-    desc: "Cupidatat non proident, sunt in culpa qui officia deserunt mollit.",
-  },
-  {
-    title: "Aliquip ex ea commodo consequat duis aute irure dolor",
-    desc: "Velit esse cillum dolore eu fugiat nulla pariatur.",
-  },
-  {
-    title: "Excepteur sint occaecat cupidatat non proident",
-    desc: "Sunt in culpa qui officia deserunt mollit anim id est laborum.",
-  },
-  {
-    title: "Tempor incididunt ut labore et dolore magna aliqua",
-    desc: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-  },
-];
-
-const eventsVN = [
-  { date: "27/09", event: "Lorem ipsum event", value: "đang cập nhật" },
-  { date: "05/10", event: "Consectetur meeting", value: "đang cập nhật" },
-  { date: "12/10", event: "Sed do issuance", value: "đang cập nhật" },
-];
-
-const eventsGlobal = [
-  { date: "30/09", event: "Ut enim PMI", value: "đang cập nhật" },
-  { date: "04/10", event: "Minim laboris report", value: "đang cập nhật" },
-  { date: "18/10", event: "CPI dolor sit", value: "đang cập nhật" },
-];
+import { useLanguage } from "~/i18n/LanguageContext";
 
 export default function Economy() {
+  const { t } = useLanguage();
+
+  const macroNews = [
+    {
+      title: t("newsTitle"),
+      desc: t("newsDesc"),
+    },
+    {
+      title: t("newsTitle"),
+      desc: t("newsDesc"),
+    },
+    {
+      title: t("newsTitle"),
+      desc: t("newsDesc"),
+    },
+    {
+      title: t("newsTitle"),
+      desc: t("newsDesc"),
+    },
+    {
+      title: t("newsTitle"),
+      desc: t("newsDesc"),
+    },
+    {
+      title: t("newsTitle"),
+      desc: t("newsDesc"),
+    },
+  ];
+
+  const eventsVN = [
+    { date: "27/09", event: "Lorem ipsum event", value: t("updating") },
+    { date: "05/10", event: "Consectetur meeting", value: t("updating") },
+    { date: "12/10", event: "Sed do issuance", value: t("updating") },
+  ];
+
+  const eventsGlobal = [
+    { date: "30/09", event: "Ut enim PMI", value: t("updating") },
+    { date: "04/10", event: "Minim laboris report", value: t("updating") },
+    { date: "18/10", event: "CPI dolor sit", value: t("updating") },
+  ];
   return (
     <section className="container  sm:px-8  mx-auto py-4 space-y-4 px-4 8 bg-bg-bg-color">
       <h2 className="text-lg hover:opacity-70 font-semibold text-secondary-bg-color mb-2 cursor-pointer">
-        Kinh tế
+        {t("economyTitle")}
       </h2>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
@@ -70,7 +72,7 @@ export default function Economy() {
           {/* Trong nước */}
           <div>
             <h4 className="font-semibold text-lg hover:opacity-70 mb-2 ">
-              Lịch sự kiện • Trong nước
+              {t("eventCalendar")} • {t("domestic")}
             </h4>
             <div className="space-y-1 text-sm">
               {eventsVN.map((ev, i) => (
@@ -91,7 +93,7 @@ export default function Economy() {
           {/* Quốc tế */}
           <div>
             <h4 className="font-semibold text-lg hover:opacity-70 mb-2 ">
-              Lịch sự kiện • Quốc tế
+              {t("eventCalendar")} • {t("global")}
             </h4>
             <div className="space-y-1 text-sm">
               {eventsGlobal.map((ev, i) => (

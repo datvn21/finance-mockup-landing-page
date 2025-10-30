@@ -1,13 +1,14 @@
 import React from "react";
-
-const newsItems = Array(10).fill({
-  title:
-    "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor",
-  desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkZXmghOOesxzSaFMXaLH0J6ZltDmafBAIQw&s",
-});
+import { useLanguage } from "~/i18n/LanguageContext";
 
 export default function Highlight() {
+  const { t } = useLanguage();
+
+  const newsItems = Array(10).fill({
+    title: t("newsTitle"),
+    desc: t("newsDesc"),
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkZXmghOOesxzSaFMXaLH0J6ZltDmafBAIQw&s",
+  });
   return (
     <div className="container sm:px-8 mx-auto pt-12 px-4">
       {/* Top Story & Secondary News - Side by Side */}
@@ -24,15 +25,13 @@ export default function Highlight() {
             </div>
             <div className="p-6 md:p-8">
               <h2 className="text-xl md:text-2xl font-bold text-title-color mb-4 group-hover:text-blue-600  transition-colors">
-                Lorem ipsum dolor sit amet consectetur adipiscing elit
+                {t("newsTitle")}
               </h2>
               <p className="text-main-text-color/60 mb-6 text-base md:text-lg leading-relaxed line-clamp-3">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+                {t("newsLongDesc")}
               </p>
               <p className="text-blue-600  text-sm font-semibold cursor-pointer transition-colors">
-                Xem thêm →
+                {t("readMore")} →
               </p>
             </div>
           </section>
@@ -42,7 +41,7 @@ export default function Highlight() {
         <aside className="lg:col-span-1">
           <div className="bg-node-bg-color rounded-xl border-2 border-main-text-color/20 p-4 md:p-6 h-full">
             <p className="text-sm font-bold text-main-text-color/70  pb-3">
-              Secondary • 1–5
+              {t("secondary")} • 1–5
             </p>
             <div className="space-y-4">
               {newsItems.slice(0, 5).map((item, i) => (

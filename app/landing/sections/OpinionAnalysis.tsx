@@ -1,19 +1,22 @@
 import React from "react";
-
-const industries = [
-  { title: "Bài phân tích", desc: "Tóm tắt nội dung 1–2 dòng" },
-  { title: "Bài phân tích", desc: "Tóm tắt nội dung 1–2 dòng" },
-  { title: "Bài phân tích", desc: "Tóm tắt nội dung 1–2 dòng" },
-  { title: "Bài phân tích", desc: "Tóm tắt nội dung 1–2 dòng" },
-  { title: "Bài phân tích", desc: "Tóm tắt nội dung 1–2 dòng" },
-  { title: "Bài phân tích", desc: "Tóm tắt nội dung 1–2 dòng" },
-];
+import { useLanguage } from "~/i18n/LanguageContext";
 
 export default function OpinionAnalysis() {
+  const { t } = useLanguage();
+
+  const industries = [
+    { title: t("opinionNewsTitle"), desc: t("industryNewsDesc") },
+    { title: t("opinionNewsTitle"), desc: t("industryNewsDesc") },
+    { title: t("opinionNewsTitle"), desc: t("industryNewsDesc") },
+    { title: t("opinionNewsTitle"), desc: t("industryNewsDesc") },
+    { title: t("opinionNewsTitle"), desc: t("industryNewsDesc") },
+    { title: t("opinionNewsTitle"), desc: t("industryNewsDesc") },
+  ];
+
   return (
     <section className="container  sm:px-8  mx-auto py-4 space-y-4 px-4 md:px-8">
       <h2 className="text-lg hover:opacity-70 font-semibold text-secondary-bg-color  mb-2 cursor-pointer">
-        Góc nhìn
+        {t("opinionTitle")}
       </h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">

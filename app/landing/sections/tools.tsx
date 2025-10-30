@@ -1,58 +1,62 @@
 import React from "react";
 import { Link } from "react-router";
+import { useLanguage } from "~/i18n/LanguageContext";
 
 export default function Tools() {
+  const { language, t } = useLanguage();
+  const basePath = language === "vi" ? "/" : `/${language}`;
+
   return (
     <div className="w-full sm:px-8 bg-secondary-bg-color  overflow-x-hidden transition-colors duration-300">
       <div className="container  sm:px-8  mx-auto flex justify-center h-full items-center py-4 gap-4 md:gap-8 lg:gap-16 xl:gap-24 px-4 flex-wrap">
         <Link
-          to={"/"}
+          to={basePath}
           className="font-semibold cursor-pointer text-sm md:text-base text-secondary-text-color  whitespace-nowrap hover:text-blue-100 :text-blue-400 transition-colors duration-300"
         >
-          Trang Chủ
+          {t("home")}
         </Link>
 
         <Link
-          to={"/"}
+          to={basePath}
           className="font-semibold cursor-pointer text-sm md:text-base text-secondary-text-color  whitespace-nowrap hover:text-blue-100 :text-blue-400 transition-colors duration-300"
         >
-          Thị trường
+          {t("market")}
         </Link>
         <Link
-          to={"/"}
+          to={basePath}
           className="font-semibold cursor-pointer text-sm md:text-base text-secondary-text-color  whitespace-nowrap hover:text-blue-100 :text-blue-400 transition-colors duration-300"
         >
-          Kinh tế
+          {t("economy")}
         </Link>
         <Link
-          to={"/"}
+          to={basePath}
           className="font-semibold cursor-pointer text-sm md:text-base text-secondary-text-color  whitespace-nowrap hover:text-blue-100 :text-blue-400 transition-colors duration-300 hidden md:inline-block"
         >
-          Ngành
+          {t("industry")}
         </Link>
         <Link
-          to={"/"}
+          to={basePath}
           className="font-semibold cursor-pointer text-sm md:text-base text-secondary-text-color  whitespace-nowrap hover:text-blue-100  :text-blue-400 transition-colors duration-300 hidden lg:inline-block"
         >
-          Thế giới
+          {t("world")}
         </Link>
         <Link
-          to={"/"}
+          to={basePath}
           className="font-semibold cursor-pointer text-sm md:text-base text-secondary-text-color  whitespace-nowrap hidden md:inline-block hover:text-blue-100 :text-blue-400"
         >
-          Chính sách
+          {t("policy")}
         </Link>
         <Link
-          to={"/"}
+          to={basePath}
           className="font-semibold cursor-pointer text-sm md:text-base text-secondary-text-color  whitespace-nowrap hidden lg:inline-block hover:text-blue-100 :text-blue-400"
         >
-          Ý kiến
+          {t("opinion")}
         </Link>
         <Link
-          to={"/"}
+          to={basePath}
           className="font-semibold cursor-pointer text-sm md:text-base text-secondary-text-color  whitespace-nowrap inline-block hover:text-blue-100 :text-blue-400"
         >
-          Thêm
+          {t("more")}
         </Link>
       </div>
     </div>

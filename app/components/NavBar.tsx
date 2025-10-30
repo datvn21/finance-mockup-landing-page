@@ -1,6 +1,7 @@
 import { Bell, Search, Moon, Sun } from "lucide-react";
 import React, { useState, useRef, useEffect } from "react";
-import { Link } from "react-router";
+import { Link, useLocation } from "react-router";
+import { useLanguage } from "~/i18n/LanguageContext";
 
 export default function NavBar({
   setDarkMode,
@@ -13,7 +14,26 @@ export default function NavBar({
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const searchRef = useRef<HTMLDivElement | null>(null);
   const mobileMenuRef = useRef<HTMLDivElement | null>(null);
-  const [lang, setLang] = useState<"EN" | "VI">("VI");
+  const { language, t } = useLanguage();
+  const location = useLocation();
+
+  // Get the opposite language path
+  const getLanguagePath = () => {
+    const currentPath = location.pathname;
+    if (language === "vi") {
+      // Switch to English
+      if (currentPath === "/" || currentPath === "/vi") {
+        return "/en";
+      }
+      return currentPath.replace(/^\/vi/, "/en");
+    } else {
+      // Switch to Vietnamese
+      if (currentPath === "/en") {
+        return "/vi";
+      }
+      return currentPath.replace(/^\/en/, "/vi");
+    }
+  };
 
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
@@ -36,11 +56,11 @@ export default function NavBar({
       {/* changed container  sm:px-8  to flex for better responsive control */}
       <div className="container  sm:px-8  mx-auto py-3 px-4 flex items-center justify-between bg-main-bg-color">
         <Link
-          to="/"
+          to={language === "vi" ? "/" : `/${language}`}
           className="text-start text-nowrap text-secondary-bg-color my-auto font-bold inline-flex flex-col cursor-pointer select-none"
         >
-          REAL TIME FINANCE
-          <span className="text-xs text-gray-500">TRANG THÔNG TIN</span>
+          {t("siteName")}
+          <span className="text-xs text-gray-500">{t("siteDescription")}</span>
         </Link>
 
         {/* full search: visible on md+ */}
@@ -50,8 +70,8 @@ export default function NavBar({
             <input
               className="w-full pl-10 pr-3 py-2 border-2 rounded-full border-main-text-color/20 focus:border-main-text-color/30 focus:outline-none placeholder:text-main-text-color/60"
               type="text"
-              placeholder="Tìm kiếm..."
-              aria-label="Tìm kiếm"
+              placeholder={t("search")}
+              aria-label={t("search")}
             />
           </div>
         </div>
@@ -68,24 +88,22 @@ export default function NavBar({
                     onClick={() => setMobileMenuOpen(false)}
                     className="px-3 py-2 rounded hover:bg-main-bg-color/80"
                   >
-                    Đăng nhập
+                    {t("signIn")}
                   </Link>
                   <Link
                     to="/register"
                     onClick={() => setMobileMenuOpen(false)}
                     className="px-3 py-2 rounded hover:bg-main-bg-color/80"
                   >
-                    Đăng ký
+                    {t("signUp")}
                   </Link>
-                  <button
-                    onClick={() => {
-                      setLang((l) => (l === "VI" ? "EN" : "VI"));
-                      setMobileMenuOpen(false);
-                    }}
+                  <Link
+                    to={getLanguagePath()}
+                    onClick={() => setMobileMenuOpen(false)}
                     className="px-3 py-2 text-left rounded hover:bg-main-bg-color/80"
                   >
-                    Ngôn ngữ: {lang}
-                  </button>
+                    {t("language")}: {language.toUpperCase()}
+                  </Link>
                 </div>
               </div>
             )}
@@ -95,7 +113,7 @@ export default function NavBar({
           <div className="md:hidden" ref={searchRef}>
             <button
               onClick={() => setSearchOpen((v) => !v)}
-              aria-label="Mở tìm kiếm"
+              aria-label={t("search")}
               className="p-2 rounded-md "
             >
               <Search className="md:w-5 md:h-5 text-main-text-color " />
@@ -111,8 +129,8 @@ export default function NavBar({
                       autoFocus
                       className="w-full pl-10 pr-3 py-2 border rounded-lg border-main-text-color/20 focus:border-main-text-color/30  focus:border-2 focus:outline-none placeholder:text-main-text-color/60"
                       type="text"
-                      placeholder="Tìm kiếm..."
-                      aria-label="Tìm kiếm"
+                      placeholder={t("search")}
+                      aria-label={t("search")}
                     />
                   </div>
                 </div>
@@ -121,26 +139,26 @@ export default function NavBar({
           </div>
 
           {/* language button - first on desktop */}
-          <button
-            onClick={() => setLang((l) => (l === "VI" ? "EN" : "VI"))}
-            className="px-2 py-1 rounded-md  text-sm hidden md:inline-flex cursor-pointer "
-            aria-label="Chuyển ngôn ngữ"
+          <Link
+            to={getLanguagePath()}
+            className="px-2 py-1 rounded-md  text-sm hidden md:inline-flex cursor-pointer hover:opacity-50"
+            aria-label={t("language")}
           >
             VI/EN
-          </button>
+          </Link>
 
           <Link
             to="/register"
             className="hidden md:inline-block hover:opacity-50 cursor-pointer "
           >
-            Đăng ký
+            {t("signUp")}
           </Link>
 
           <Link
             to="/login"
             className="hidden md:inline-block hover:opacity-50 cursor-pointer "
           >
-            Đăng nhập
+            {t("signIn")}
           </Link>
 
           <div className="flex items-center gap-3">

@@ -1,19 +1,22 @@
 import React from "react";
-
-const industries = [
-  { title: "Tiêu đề Thế giới", desc: "Tóm tắt nội dung 1–2 dòng" },
-  { title: "Tiêu đề Thế giới", desc: "Tóm tắt nội dung 1–2 dòng" },
-  { title: "Tiêu đề Thế giới", desc: "Tóm tắt nội dung 1–2 dòng" },
-  { title: "Tiêu đề Thế giới", desc: "Tóm tắt nội dung 1–2 dòng" },
-  { title: "Tiêu đề Thế giới", desc: "Tóm tắt nội dung 1–2 dòng" },
-  { title: "Tiêu đề Thế giới", desc: "Tóm tắt nội dung 1–2 dòng" },
-];
+import { useLanguage } from "~/i18n/LanguageContext";
 
 export default function International() {
+  const { t } = useLanguage();
+
+  const industries = [
+    { title: t("worldNewsTitle"), desc: t("industryNewsDesc") },
+    { title: t("worldNewsTitle"), desc: t("industryNewsDesc") },
+    { title: t("worldNewsTitle"), desc: t("industryNewsDesc") },
+    { title: t("worldNewsTitle"), desc: t("industryNewsDesc") },
+    { title: t("worldNewsTitle"), desc: t("industryNewsDesc") },
+    { title: t("worldNewsTitle"), desc: t("industryNewsDesc") },
+  ];
+
   return (
     <section className="container  sm:px-8  mx-auto py-4 space-y-4 px-4 md:px-8">
       <h2 className="text-lg hover:opacity-70 font-semibold text-secondary-bg-color  mb-2 cursor-pointer">
-        Thế giới
+        {t("worldTitle")}
       </h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
