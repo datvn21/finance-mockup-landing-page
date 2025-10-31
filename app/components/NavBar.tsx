@@ -2,7 +2,8 @@ import { Bell, Search, Moon, Sun } from "lucide-react";
 import React, { useState, useRef, useEffect } from "react";
 import { Link, useLocation } from "react-router";
 import { useLanguage } from "~/i18n/LanguageContext";
-
+import Tools from "./Tools";
+import RTFLogo from "../assets/RTF.svg?react";
 export default function NavBar({
   setDarkMode,
   darkMode,
@@ -12,6 +13,9 @@ export default function NavBar({
 }) {
   const [searchOpen, setSearchOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const [hasScrolled, setHasScrolled] = useState(false);
   const searchRef = useRef<HTMLDivElement | null>(null);
   const mobileMenuRef = useRef<HTMLDivElement | null>(null);
   const { language, t } = useLanguage();
@@ -35,6 +39,32 @@ export default function NavBar({
     }
   };
 
+  // Handle scroll to show/hide navbar
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      // Add shadow when scrolled
+      setHasScrolled(currentScrollY > 10);
+
+      if (currentScrollY < 10) {
+        // Always show at top
+        setIsVisible(true);
+      } else if (currentScrollY > lastScrollY) {
+        // Scrolling down
+        setIsVisible(false);
+      } else {
+        // Scrolling up
+        setIsVisible(true);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
+
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
       if (searchRef.current && !searchRef.current.contains(e.target as Node)) {
@@ -52,15 +82,21 @@ export default function NavBar({
   }, []);
 
   return (
-    <nav className="w-full bg-main-bg-color">
+    <nav
+      className={`w-full bg-main-bg-color fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isVisible ? "translate-y-0" : "-translate-y-full"
+      } ${hasScrolled ? "shadow-md" : ""}`}
+    >
       {/* changed container  sm:px-8  to flex for better responsive control */}
       <div className="container  sm:px-8  mx-auto py-3 px-4 flex items-center justify-between bg-main-bg-color">
         <Link
           to={language === "vi" ? "/" : `/${language}`}
           className="text-start text-nowrap text-secondary-bg-color my-auto font-bold inline-flex flex-col cursor-pointer select-none"
         >
-          {t("siteName")}
-          <span className="text-xs text-gray-500">{t("siteDescription")}</span>
+          <RTFLogo className="h-auto w-24 fill-secondary-bg-color" />
+          <span className="text-[10px] font-normal text-gray-500">
+            {t("siteDescription")}
+          </span>
         </Link>
 
         {/* full search: visible on md+ */}
@@ -200,6 +236,7 @@ export default function NavBar({
           </button>
         </div>
       </div>
+      <Tools />
     </nav>
   );
 }

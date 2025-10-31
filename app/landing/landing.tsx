@@ -1,5 +1,4 @@
 import React, { Suspense } from "react";
-import Tools from "./sections/tools";
 import CostUpdate from "./sections/CostUpdate";
 import Highlight from "./sections/HighLight";
 import Market from "./sections/Market";
@@ -15,7 +14,6 @@ export default function Landing() {
   return (
     <div className="flex-1 overflow-hidden mb-4 ">
       <Suspense fallback={<div>Loading...</div>}>
-        <Tools />
         <CostUpdate />
         <Highlight />
         <Market />

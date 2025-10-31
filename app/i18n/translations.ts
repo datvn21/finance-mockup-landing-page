@@ -13,12 +13,12 @@ export const translations = {
     industry: "Ngành",
     world: "Thế giới",
     policy: "Chính sách",
-    opinion: "Ý kiến",
+    opinion: "Góc nhìn",
     more: "Thêm",
 
     // Site info
     siteName: "REAL TIME FINANCE",
-    siteDescription: "TRANG THÔNG TIN",
+    siteDescription: "TRANG THÔNG TIN ĐIÊN TỬ TỔNG HỢP",
     siteDescriptionFull: "TRANG THÔNG TIN ĐIỆN TỬ TỔNG HỢP",
 
     // Sections
@@ -37,8 +37,10 @@ export const translations = {
 
     // News sample content
     newsTitle: "Lorem ipsum dolor sit amet consectetur adipiscing elit",
-    newsDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    newsLongDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+    newsDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    newsLongDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
 
     // Market section
     marketTitle: "Thị trường",
@@ -93,9 +95,11 @@ export const translations = {
     policies: "Chính sách",
     perspective: "Góc nhìn",
     libraryShort: "Thư viện",
-    licenseInfo: "Giấy phép thiết lập trang thông tin điện tử tổng hợp trên mạng số …….. do Sở Thông Tin và Truyền Thông thành phố Hồ Chí Minh cấp ngày. tháng. năm",
+    licenseInfo:
+      "Giấy phép thiết lập trang thông tin điện tử tổng hợp trên mạng số …….. do Sở Thông Tin và Truyền Thông thành phố Hồ Chí Minh cấp ngày. tháng. năm",
     responsiblePerson: "Chịu trách nhiệm nội dung: Bà Đinh Hạ Vân",
-    address: "Trụ sở: AB04.01, Khu AB, Tầng 4, Khu thương mại dịch vụ căn hộ cao tầng, số 58B Nguyễn Thị Thập, Phường Bình Thuận, Quận 7, Thành phố Hồ Chí Minh, Việt Nam",
+    address:
+      "Trụ sở: AB04.01, Khu AB, Tầng 4, Khu thương mại dịch vụ căn hộ cao tầng, số 58B Nguyễn Thị Thập, Phường Bình Thuận, Quận 7, Thành phố Hồ Chí Minh, Việt Nam",
     phone: "Điện thoại",
     termsConditions: "Điều kiện và điều khoản sử dụng",
     privacyPolicy: "Chính sách bảo mật",
@@ -139,8 +143,10 @@ export const translations = {
 
     // News sample content
     newsTitle: "Lorem ipsum dolor sit amet consectetur adipiscing elit",
-    newsDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    newsLongDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+    newsDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    newsLongDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
 
     // Market section
     marketTitle: "Market",
@@ -195,9 +201,11 @@ export const translations = {
     policies: "Policies",
     perspective: "Perspective",
     libraryShort: "Library",
-    licenseInfo: "Electronic information portal establishment license number …….. issued by Ho Chi Minh City Department of Information and Communications on [date]. [month]. [year]",
+    licenseInfo:
+      "Electronic information portal establishment license number …….. issued by Ho Chi Minh City Department of Information and Communications on [date]. [month]. [year]",
     responsiblePerson: "Content responsible: Mrs. Dinh Ha Van",
-    address: "Office: AB04.01, Area AB, Floor 4, High-rise apartment commercial service area, No. 58B Nguyen Thi Thap, Binh Thuan Ward, District 7, Ho Chi Minh City, Vietnam",
+    address:
+      "Office: AB04.01, Area AB, Floor 4, High-rise apartment commercial service area, No. 58B Nguyen Thi Thap, Binh Thuan Ward, District 7, Ho Chi Minh City, Vietnam",
     phone: "Phone",
     termsConditions: "Terms and Conditions",
     privacyPolicy: "Privacy Policy",

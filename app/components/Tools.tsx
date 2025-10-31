@@ -13,13 +13,6 @@ export default function Tools() {
           to={basePath}
           className="font-semibold cursor-pointer text-sm md:text-base text-secondary-text-color  whitespace-nowrap hover:text-blue-100 :text-blue-400 transition-colors duration-300"
         >
-          {t("home")}
-        </Link>
-
-        <Link
-          to={basePath}
-          className="font-semibold cursor-pointer text-sm md:text-base text-secondary-text-color  whitespace-nowrap hover:text-blue-100 :text-blue-400 transition-colors duration-300"
-        >
           {t("market")}
         </Link>
         <Link
@@ -30,7 +23,7 @@ export default function Tools() {
         </Link>
         <Link
           to={basePath}
-          className="font-semibold cursor-pointer text-sm md:text-base text-secondary-text-color  whitespace-nowrap hover:text-blue-100 :text-blue-400 transition-colors duration-300 hidden md:inline-block"
+          className="font-semibold cursor-pointer text-sm md:text-base text-secondary-text-color  whitespace-nowrap hover:text-blue-100 :text-blue-400 transition-colors duration-300 inline-block"
         >
           {t("industry")}
         </Link>

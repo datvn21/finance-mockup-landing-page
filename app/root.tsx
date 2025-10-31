@@ -52,7 +52,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <body className="flex flex-col min-h-screen overflow-x-hidden bg-main-bg-color">
         <LanguageProvider language={language}>
           <NavBar setDarkMode={setDarkMode} darkMode={darkMode} />
-          {children}
+          <div className="pt-[80px]">{children}</div>
           <ScrollRestoration />
           <Scripts />
           <Footer />
