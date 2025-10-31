@@ -157,7 +157,7 @@ export const translations = {
     updating: "updating",
 
     // Industry section
-    industryTitle: "Industry",
+    industryTitle: "Industries",
     industryNewsTitle: "Title",
     industryNewsDesc: "Content summary 1–2 lines",
 
