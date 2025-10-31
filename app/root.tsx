@@ -52,7 +52,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <body className="flex flex-col min-h-screen overflow-x-hidden bg-main-bg-color">
         <LanguageProvider language={language}>
           <NavBar setDarkMode={setDarkMode} darkMode={darkMode} />
-          <div className="pt-[80px]">{children}</div>
+          <div className="pt-36">{children}</div>
           <ScrollRestoration />
           <Scripts />
           <Footer />
@@ -70,7 +70,7 @@ export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
   let message = "Oops!";
   let details = "An unexpected error occurred.";
   let stack: string | undefined;
-
+  console.error("error");
   if (isRouteErrorResponse(error)) {
     message = error.status === 404 ? "404" : "Error";
     details =
@@ -83,14 +83,10 @@ export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
   }
 
   return (
-    <main className="pt-16 p-4 container  sm:px-8  mx-auto">
-      <h1>{message}</h1>
-      <p>{details}</p>
-      {stack && (
-        <pre className="w-full p-4 overflow-x-auto">
-          <code>{stack}</code>
-        </pre>
-      )}
+    <main className="container min-h-screen items-center justify-center flex mx-auto">
+      <div className="text-center font-bold text-secondary-bg-color text-2xl">
+        Comming Soon
+      </div>
     </main>
   );
 }
