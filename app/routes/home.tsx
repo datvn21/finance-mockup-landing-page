@@ -5,7 +5,7 @@ import Landing from "~/landing/landing";
 export function meta({}: Route.MetaArgs) {
   return [
     { title: "REAL TIME FINANCE" },
-    { name: "description", content: "test" },
+    { name: "description", content: "REAL TIME FINANCE DESCRIPTION" },
   ];
 }
 
