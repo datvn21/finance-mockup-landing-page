@@ -5,7 +5,7 @@ export const translations = {
     signIn: "Đăng nhập",
     signUp: "Đăng ký",
     language: "Ngôn ngữ",
-    
+
     // Tools/Menu
     home: "Trang Chủ",
     market: "Thị trường",
@@ -15,12 +15,12 @@ export const translations = {
     policy: "Chính sách",
     opinion: "Ý kiến",
     more: "Thêm",
-    
+
     // Site info
     siteName: "REAL TIME FINANCE",
     siteDescription: "TRANG THÔNG TIN",
     siteDescriptionFull: "TRANG THÔNG TIN ĐIỆN TỬ TỔNG HỢP",
-    
+
     // Sections
     tools: "Công cụ",
     costUpdate: "Cập nhật giá",
@@ -30,55 +30,55 @@ export const translations = {
     opinionAnalysis: "Phân tích & Ý kiến",
     promise: "Cam kết",
     library: "Thư viện",
-    
+
     // Highlight section
     readMore: "Xem thêm",
     secondary: "Secondary",
-    
+
     // News sample content
     newsTitle: "Lorem ipsum dolor sit amet consectetur adipiscing elit",
     newsDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     newsLongDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-    
+
     // Market section
     marketTitle: "Thị trường",
     highlightToday: "Nổi bật hôm nay",
     seeMoreMarket: "Xem thêm thị trường",
     stocks: "Cổ phiếu",
     crypto: "Tiền mã hóa",
-    
+
     // Economy section
     economyTitle: "Kinh tế",
     eventCalendar: "Lịch sự kiện",
     domestic: "Trong nước",
     global: "Quốc tế",
     updating: "đang cập nhật",
-    
+
     // Industry section
     industryTitle: "Ngành",
     industryNewsTitle: "Tiêu đề",
     industryNewsDesc: "Tóm tắt nội dung 1–2 dòng",
-    
+
     // International section
     worldTitle: "Thế giới",
     worldNewsTitle: "Tiêu đề Thế giới",
-    
+
     // Policy section
     policyTitle: "Chính sách",
     policyNewsTitle: "Chính sách mới",
-    
+
     // Opinion section
     opinionTitle: "Góc nhìn",
     opinionNewsTitle: "Bài phân tích",
-    
+
     // Promise section
     promiseTitle: "Danh mục triển vọng",
     promiseContent: "Lorem ipsum dolor sit amet, consectetur adipiscing elits",
-    
+
     // Library section
     libraryTitle: "Thư viện kiến thức",
     libraryTopicTitle: "Chủ đề nổi bật",
-    
+
     // Footer
     followUs: "Theo dõi chúng tôi",
     categories: "Chuyên mục",
@@ -107,7 +107,7 @@ export const translations = {
     signIn: "Sign In",
     signUp: "Sign Up",
     language: "Language",
-    
+
     // Tools/Menu
     home: "Home",
     market: "Markets",
@@ -117,12 +117,12 @@ export const translations = {
     policy: "Politics",
     opinion: "Opinion",
     more: "More",
-    
+
     // Site info
     siteName: "REAL TIME FINANCE",
     siteDescription: "INFORMATION PORTAL",
     siteDescriptionFull: "COMPREHENSIVE ELECTRONIC INFORMATION PORTAL",
-    
+
     // Sections
     tools: "Tools",
     costUpdate: "Price Update",
@@ -132,55 +132,55 @@ export const translations = {
     opinionAnalysis: "Analysis & Opinion",
     promise: "Promise",
     library: "Library",
-    
+
     // Highlight section
     readMore: "Read more",
     secondary: "Secondary",
-    
+
     // News sample content
     newsTitle: "Lorem ipsum dolor sit amet consectetur adipiscing elit",
     newsDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     newsLongDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-    
+
     // Market section
     marketTitle: "Market",
     highlightToday: "Highlight Today",
     seeMoreMarket: "See more market",
     stocks: "Stocks",
     crypto: "Cryptocurrency",
-    
+
     // Economy section
-    economyTitle: "Economy",
+    economyTitle: "Economics",
     eventCalendar: "Event Calendar",
     domestic: "Domestic",
     global: "Global",
     updating: "updating",
-    
+
     // Industry section
     industryTitle: "Industry",
     industryNewsTitle: "Title",
     industryNewsDesc: "Content summary 1–2 lines",
-    
+
     // International section
     worldTitle: "World",
     worldNewsTitle: "World Title",
-    
+
     // Policy section
-    policyTitle: "Policy",
+    policyTitle: "Politics",
     policyNewsTitle: "New Policy",
-    
+
     // Opinion section
-    opinionTitle: "Perspective",
+    opinionTitle: "Opinion",
     opinionNewsTitle: "Analysis Article",
-    
+
     // Promise section
-    promiseTitle: "Promising Portfolio",
+    promiseTitle: "Outlook Portfolio",
     promiseContent: "Lorem ipsum dolor sit amet, consectetur adipiscing elits",
-    
+
     // Library section
-    libraryTitle: "Knowledge Library",
+    libraryTitle: "Library",
     libraryTopicTitle: "Featured Topic",
-    
+
     // Footer
     followUs: "Follow Us",
     categories: "Categories",
