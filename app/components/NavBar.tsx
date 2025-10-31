@@ -52,7 +52,7 @@ export default function NavBar({
         setIsVisible(true);
       } else if (currentScrollY > lastScrollY) {
         // Scrolling down
-        setIsVisible(false);
+        // setIsVisible(false);
       } else {
         // Scrolling up
         setIsVisible(true);
