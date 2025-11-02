@@ -14,7 +14,7 @@ export const translations = {
     world: "Thế giới",
     policy: "Chính sách",
     opinion: "Góc nhìn",
-    more: "Thêm",
+    more: "Khác",
 
     // Site info
     siteName: "REAL TIME FINANCE",
