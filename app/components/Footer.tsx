@@ -17,7 +17,7 @@ export default function Footer() {
               to={basePath}
               className="text-start text-nowrap text-xl md:text-2xl my-auto font-bold inline-flex flex-col cursor-pointer select-none"
             >
-              <RTFLogo className=" h-6 w-auto mb-1 fill-white" />
+              <RTFLogo className="h-4 md:h-6 w-auto mb-1 fill-white" />
               <span className="text-[10px] font-normal text-gray-500">
                 {t("siteDescription")}
               </span>
