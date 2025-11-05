@@ -3,7 +3,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { Link, useLocation } from "react-router";
 import { useLanguage } from "~/i18n/LanguageContext";
 import Tools from "./Tools";
-import RTFLogo from "../assets/RTF.svg?react";
+import RTFLogo from "../assets/rtf-logo-final.svg?react";
 export default function NavBar({
   setDarkMode,
   darkMode,
@@ -83,9 +83,8 @@ export default function NavBar({
 
   return (
     <nav
-      className={`w-full bg-main-bg-color fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isVisible ? "translate-y-0" : "-translate-y-full"
-      } ${hasScrolled ? "shadow-md" : ""}`}
+      className={`w-full bg-main-bg-color fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isVisible ? "translate-y-0" : "-translate-y-full"
+        } ${hasScrolled ? "shadow-md" : ""}`}
     >
       {/* changed container  sm:px-8  to flex for better responsive control */}
       <div className="container  sm:px-8  mx-auto py-3 px-4 flex items-center justify-between bg-main-bg-color">
