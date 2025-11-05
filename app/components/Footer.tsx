@@ -3,7 +3,7 @@ import { Facebook, Instagram, Youtube } from "lucide-react";
 import React from "react";
 import { Link } from "react-router";
 import { useLanguage } from "~/i18n/LanguageContext";
-import RTFLogo from "../assets/RTF.svg?react";
+import RTFLogo from "../assets/rtf-logo-final.svg?react";
 export default function Footer() {
   const { t, language } = useLanguage();
   const basePath = language === "vi" ? "/" : `/${language}`;
@@ -17,7 +17,7 @@ export default function Footer() {
               to={basePath}
               className="text-start text-nowrap text-xl md:text-2xl my-auto font-bold inline-flex flex-col cursor-pointer select-none"
             >
-              <RTFLogo className="w-28 h-auto mb-1 fill-white" />
+              <RTFLogo className=" h-6 w-auto mb-1 fill-white" />
               <span className="text-[10px] font-normal text-gray-500">
                 {t("siteDescription")}
               </span>

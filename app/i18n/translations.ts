@@ -18,7 +18,7 @@ export const translations = {
 
     // Site info
     siteName: "REAL TIME FINANCE",
-    siteDescription: "TRANG THÔNG TIN ĐIÊN TỬ TỔNG HỢP",
+    siteDescription: "TRANG THÔNG TIN ĐIỆN TỬ TỔNG HỢP",
     siteDescriptionFull: "TRANG THÔNG TIN ĐIỆN TỬ TỔNG HỢP",
 
     // Sections
