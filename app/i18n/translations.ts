@@ -96,7 +96,7 @@ export const translations = {
     perspective: "Góc nhìn",
     libraryShort: "Thư viện",
     licenseInfo:
-      "Giấy phép thiết lập trang thông tin điện tử tổng hợp trên mạng số …….. do Sở Thông Tin và Truyền Thông thành phố Hồ Chí Minh cấp ngày. tháng. năm",
+      "Giấy phép thiết lập trang thông tin điện tử tổng hợp trên mạng số …….. do Sở Văn Hoá và Thể Thao TP.HCM",
     responsiblePerson: "Chịu trách nhiệm nội dung: Bà Đinh Hạ Vân",
     address:
       "Trụ sở: AB04.01, Khu AB, Tầng 4, Khu thương mại dịch vụ căn hộ cao tầng, số 58B Nguyễn Thị Thập, Phường Bình Thuận, Quận 7, Thành phố Hồ Chí Minh, Việt Nam",
@@ -124,8 +124,8 @@ export const translations = {
 
     // Site info
     siteName: "REAL TIME FINANCE",
-    siteDescription: "INFORMATION PORTAL",
-    siteDescriptionFull: "COMPREHENSIVE ELECTRONIC INFORMATION PORTAL",
+    siteDescription: "FINANCIAL INFORMATION PORTAL",
+    siteDescriptionFull: "FINANCIAL INFORMATION PORTAL",
 
     // Sections
     tools: "Tools",
@@ -149,9 +149,9 @@ export const translations = {
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
 
     // Market section
-    marketTitle: "Market",
+    marketTitle: "Markets",
     highlightToday: "Highlight Today",
-    seeMoreMarket: "See more market",
+    seeMoreMarket: "See more markets",
     stocks: "Stocks",
     crypto: "Cryptocurrency",
 
@@ -191,25 +191,25 @@ export const translations = {
     followUs: "Follow Us",
     categories: "Categories",
     quickAccess: "Quick Access",
-    contact: "Contact",
+    contact: "Contact Us",
     adPartnership: "Advertising Partnership",
-    customerCare: "Customer Care",
+    customerCare: "Customer Service",
     email: "Email",
     support: "Support",
     aboutUs: "About Us",
     careers: "Careers",
     policies: "Policies",
-    perspective: "Perspective",
+    perspective: "Opinion",
     libraryShort: "Library",
     licenseInfo:
-      "Electronic information portal establishment license number …….. issued by Ho Chi Minh City Department of Information and Communications on [date]. [month]. [year]",
-    responsiblePerson: "Content responsible: Mrs. Dinh Ha Van",
+      "License No…… issued on ….,….2025 by tHo Chi Minh City Department of Culture and Sports",
+    responsiblePerson: "Content responsible person: Ha-Van Dinh",
     address:
-      "Office: AB04.01, Area AB, Floor 4, High-rise apartment commercial service area, No. 58B Nguyen Thi Thap, Binh Thuan Ward, District 7, Ho Chi Minh City, Vietnam",
-    phone: "Phone",
+      "Head Office: AB04.01, Block AB, 4th Floor, High-Rise Apartment Commercial Service Area, 58B Nguyen Thi Thap Street, Tan Thuan, Ho Chi Minh City, Vietnam",
+    phone: "Tel",
     termsConditions: "Terms and Conditions",
     privacyPolicy: "Privacy Policy",
-    copyright: "© Copyright 2025-2025 Company Limited ......",
+    copyright: "Copyright ©Real Time Finance. All rights reserved.",
   },
 } as const;
 
