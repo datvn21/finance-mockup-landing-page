@@ -9,6 +9,7 @@ import OpinionAnalysis from "./sections/OpinionAnalysis";
 import PolicyRegulation from "./sections/PolicyRegulation";
 import Promise from "./sections/Promise";
 import Library from "./sections/Library";
+import Company from "./sections/Company";
 
 export default function Landing() {
   return (
@@ -22,6 +23,7 @@ export default function Landing() {
         <International />
         <PolicyRegulation />
         <OpinionAnalysis />
+        <Company />
         <Promise />
         <Library />
       </Suspense>

@@ -3,7 +3,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { Link, useLocation } from "react-router";
 import { useLanguage } from "~/i18n/LanguageContext";
 import Tools from "./Tools";
-import RTFLogo from "../assets/rtf-logo-final.svg?react";
+import RTFLogo from "../assets/RTF.svg?react";
 export default function NavBar({
   setDarkMode,
   darkMode,
@@ -83,8 +83,9 @@ export default function NavBar({
 
   return (
     <nav
-      className={`w-full bg-main-bg-color fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isVisible ? "translate-y-0" : "-translate-y-full"
-        } ${hasScrolled ? "shadow-md" : ""}`}
+      className={`w-full bg-main-bg-color fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isVisible ? "translate-y-0" : "-translate-y-full"
+      } ${hasScrolled ? "shadow-md" : ""}`}
     >
       {/* changed container  sm:px-8  to flex for better responsive control */}
       <div className="container  sm:px-8  mx-auto py-3 px-4 flex items-center justify-between bg-main-bg-color">
@@ -92,18 +93,18 @@ export default function NavBar({
           to={language === "vi" ? "/" : `/${language}`}
           className="text-start text-nowrap text-secondary-bg-color my-auto font-bold inline-flex flex-col cursor-pointer select-none"
         >
-          <RTFLogo className="h-4 md:h-6 w-fit mb-1 fill-secondary-bg-color" />
-          <span className="text-[8px] md:text-[10px] font-normal text-gray-500">
+          <RTFLogo className="h-3 md:h-4 w-fit mb-1 fill-secondary-bg-color" />
+          <span className="text-[8px] md:text-[10px] font-semibold text-secondary-bg-color">
             {t("siteDescription")}
           </span>
         </Link>
 
         {/* full search: visible on md+ */}
-        <div className="hidden md:block flex-1 max-w-[480px] mx-6">
+        <div className="hidden md:block flex-1 max-w-[350px] mx-6">
           <div className="relative inline-block w-full">
             <Search className="w-5 h-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-main-text-color md:text-icon-color" />
             <input
-              className="w-full pl-10 pr-3 py-2 border-2 rounded-full border-main-text-color/20 focus:border-main-text-color/30 focus:outline-none placeholder:text-main-text-color/60"
+              className="w-full pl-10 pr-3 py-1.5 border-2 rounded-full border-main-text-color/20 focus:border-main-text-color/30 focus:outline-none placeholder:text-main-text-color/60 text-sm"
               type="text"
               placeholder={t("search")}
               aria-label={t("search")}
@@ -116,7 +117,7 @@ export default function NavBar({
           {/* mobile menu button (shows Sign In / Sign Up on small screens) */}
           <div className="md:hidden" ref={mobileMenuRef}>
             {mobileMenuOpen && (
-              <div className="absolute right-4 top-14 mt-2 w-44 bg-main-bg-color border rounded-md shadow-md z-[99]">
+              <div className="absolute right-4 top-14 mt-2 w-44 bg-main-bg-color border rounded-md shadow-md z-50">
                 <div className="flex flex-col p-2">
                   <Link
                     to="/login"
@@ -176,7 +177,7 @@ export default function NavBar({
           {/* language button - first on desktop */}
           <Link
             to={getLanguagePath()}
-            className="px-2 py-1 rounded-md  text-sm hidden md:inline-flex cursor-pointer hover:opacity-50"
+            className="px-2 py-1 rounded-md  text-sm font-semibold hidden md:inline-flex cursor-pointer hover:opacity-50"
             aria-label={t("language")}
           >
             VI/EN
@@ -184,14 +185,14 @@ export default function NavBar({
 
           <Link
             to="/register"
-            className="hidden md:inline-block hover:opacity-50 cursor-pointer "
+            className="hidden text-sm font-semibold md:inline-block hover:opacity-50 cursor-pointer "
           >
             {t("signUp")}
           </Link>
 
           <Link
             to="/login"
-            className="hidden md:inline-block hover:opacity-50 cursor-pointer "
+            className="hidden text-sm font-semibold md:inline-block hover:opacity-50 cursor-pointer "
           >
             {t("signIn")}
           </Link>

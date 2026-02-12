@@ -1,20 +1,21 @@
 export const translations = {
   vi: {
     // NavBar
-    search: "Tìm kiếm...",
-    signIn: "Đăng nhập",
-    signUp: "Đăng ký",
-    language: "Ngôn ngữ",
+    search: "TÌM KIẾM...",
+    signIn: "ĐĂNG NHẬP",
+    signUp: "ĐĂNG KÝ",
+    language: "NGÔN NGỮ",
 
     // Tools/Menu
-    home: "Trang Chủ",
-    market: "Thị trường",
-    economy: "Kinh tế",
-    industry: "Ngành",
-    world: "Thế giới",
-    policy: "Chính sách",
-    opinion: "Góc nhìn",
-    more: "Khác",
+    home: "TRANG CHỦ",
+    market: "THỊ TRƯỜNG",
+    economy: "KINH TẾ",
+    industry: "NGÀNH",
+    world: "THẾ GIỚI",
+    policy: "CHÍNH SÁCH",
+    opinion: "GÓC NHÌN",
+    company: "DOANH NGHIỆP",
+    more: "KHÁC",
 
     // Site info
     siteName: "REAL TIME FINANCE",
@@ -73,6 +74,10 @@ export const translations = {
     opinionTitle: "Góc nhìn",
     opinionNewsTitle: "Bài phân tích",
 
+    // Company section
+    companyTitle: "Doanh nghiệp",
+    companyNewsTitle: "Tin tức doanh nghiệp",
+
     // Promise section
     promiseTitle: "Danh mục triển vọng",
     promiseContent: "Lorem ipsum dolor sit amet, consectetur adipiscing elits",
@@ -82,6 +87,12 @@ export const translations = {
     libraryTopicTitle: "Chủ đề nổi bật",
 
     // Footer
+    economyCategory: "Kinh tế",
+    industryCategory: "Ngành",
+    worldCategory: "Thế giới",
+    policyCategory: "Chính sách",
+    perspectiveCategory: "Góc nhìn",
+    libraryShortCategory: "Thư viện",
     followUs: "Theo dõi chúng tôi",
     categories: "Chuyên mục",
     quickAccess: "Truy cập nhanh",
@@ -107,20 +118,21 @@ export const translations = {
   },
   en: {
     // NavBar
-    search: "Search...",
-    signIn: "Sign In",
-    signUp: "Sign Up",
-    language: "Language",
+    search: "SEARCH...",
+    signIn: "SIGN IN",
+    signUp: "SIGN UP",
+    language: "LANGUAGE",
 
     // Tools/Menu
-    home: "Home",
-    market: "Markets",
-    economy: "Economics",
-    industry: "Industries",
-    world: "World",
-    policy: "Politics",
-    opinion: "Opinion",
-    more: "More",
+    home: "HOME",
+    market: "MARKETS",
+    economy: "ECONOMICS",
+    industry: "INDUSTRIES",
+    world: "WORLD",
+    policy: "POLITICS",
+    opinion: "OPINION",
+    company: "COMPANY",
+    more: "MORE",
 
     // Site info
     siteName: "REAL TIME FINANCE",
@@ -179,6 +191,9 @@ export const translations = {
     opinionTitle: "Opinion",
     opinionNewsTitle: "Analysis Article",
 
+    // Company section
+    companyTitle: "Company",
+    companyNewsTitle: "Company News",
     // Promise section
     promiseTitle: "Outlook Portfolio",
     promiseContent: "Lorem ipsum dolor sit amet, consectetur adipiscing elits",
@@ -188,6 +203,12 @@ export const translations = {
     libraryTopicTitle: "Featured Topic",
 
     // Footer
+    economyCategory: "Economy",
+    industryCategory: "Industry",
+    worldCategory: "World",
+    policyCategory: "Policy",
+    perspectiveCategory: "Opinion",
+    libraryShortCategory: "Library",
     followUs: "Follow Us",
     categories: "Categories",
     quickAccess: "Quick Access",

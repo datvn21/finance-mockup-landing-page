@@ -1,7 +1,6 @@
-
 import { Link } from "react-router";
 import { useLanguage } from "~/i18n/LanguageContext";
-import RTFLogo from "../assets/rtf-logo-final.svg?react";
+import RTFLogo from "../assets/RTF.svg?react";
 export default function Footer() {
   const { t, language } = useLanguage();
   const basePath = language === "vi" ? "/" : `/${language}`;
@@ -15,8 +14,8 @@ export default function Footer() {
               to={basePath}
               className="text-start text-nowrap text-xl md:text-2xl my-auto font-bold inline-flex flex-col cursor-pointer select-none"
             >
-              <RTFLogo className="h-4 md:h-6 w-fit mb-1 fill-white" />
-              <span className="text-[8px] md:text-[10px] font-normal text-gray-500">
+              <RTFLogo className="h-3 md:h-4 w-fit mb-1 fill-white" />
+              <span className="text-[8px] md:text-[10px] font-semibold text-white/80">
                 {t("siteDescription")}
               </span>
             </Link>
@@ -116,22 +115,22 @@ export default function Footer() {
               <div>
                 <ul className="grid grid-cols-3 gap-4 mt-4 space-x-4">
                   <li className="cursor-pointer hover:underline text-white/80">
-                    {t("economy")}
+                    {t("economyCategory")}
                   </li>
                   <li className="cursor-pointer hover:underline text-white/80">
-                    {t("industry")}
+                    {t("industryCategory")}
                   </li>
                   <li className="cursor-pointer hover:underline text-white/80">
-                    {t("world")}
+                    {t("worldCategory")}
                   </li>
                   <li className="cursor-pointer hover:underline text-white/80">
-                    {t("policy")}
+                    {t("policyCategory")}
                   </li>
                   <li className="cursor-pointer hover:underline text-white/80">
-                    {t("perspective")}
+                    {t("perspectiveCategory")}
                   </li>
                   <li className="cursor-pointer hover:underline text-white/80">
-                    {t("libraryShort")}
+                    {t("libraryShortCategory")}
                   </li>
                 </ul>
               </div>
