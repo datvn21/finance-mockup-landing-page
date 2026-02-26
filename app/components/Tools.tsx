@@ -66,7 +66,7 @@ export default function Tools() {
         </Link>
         <Link
           to={basePath}
-          className="font-bold cursor-pointer text-xs md:text-sm hidden lg:inline-block  text-secondary-text-color  whitespace-nowrap hover:text-blue-100 :text-blue-400 transition-colors duration-300"
+          className="font-bold cursor-pointer text-xs md:text-sm hidden xl:inline-block  text-secondary-text-color  whitespace-nowrap hover:text-blue-100 :text-blue-400 transition-colors duration-300"
         >
           {t("toolsMenu")}
         </Link>
