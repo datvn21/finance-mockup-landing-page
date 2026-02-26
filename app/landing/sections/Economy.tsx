@@ -32,15 +32,15 @@ export default function Economy() {
   ];
 
   const eventsVN = [
-    { date: "27/09", event: "Lorem ipsum event", value: t("updating") },
-    { date: "05/10", event: "Consectetur meeting", value: t("updating") },
-    { date: "12/10", event: "Sed do issuance", value: t("updating") },
+    { date: "27/09", event: t("eventVN1"), value: t("updating") },
+    { date: "05/10", event: t("eventVN2"), value: t("updating") },
+    { date: "12/10", event: t("eventVN3"), value: t("updating") },
   ];
 
   const eventsGlobal = [
-    { date: "30/09", event: "Ut enim PMI", value: t("updating") },
-    { date: "04/10", event: "Minim laboris report", value: t("updating") },
-    { date: "18/10", event: "CPI dolor sit", value: t("updating") },
+    { date: "30/09", event: t("eventGlobal1"), value: t("updating") },
+    { date: "04/10", event: t("eventGlobal2"), value: t("updating") },
+    { date: "18/10", event: t("eventGlobal3"), value: t("updating") },
   ];
   return (
     <section className="container  sm:px-8  mx-auto py-4 space-y-4 px-4 8 bg-bg-bg-color">

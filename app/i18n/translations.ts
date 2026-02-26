@@ -38,11 +38,11 @@ export const translations = {
     secondary: "Secondary",
 
     // News sample content
-    newsTitle: "Lorem ipsum dolor sit amet consectetur adipiscing elit",
+    newsTitle: "Tiêu đề tin tức mẫu",
     newsDesc:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Mô tả ngắn gọn của tin tức mẫu.",
     newsLongDesc:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+      "Mô tả dài hơn của tin tức mẫu. Nội dung này có thể bao gồm nhiều chi tiết và thông tin bổ sung.",
 
     // Market section
     marketTitle: "Thị trường",
@@ -56,7 +56,13 @@ export const translations = {
     eventCalendar: "Lịch sự kiện",
     domestic: "Trong nước",
     global: "Quốc tế",
-    updating: "đang cập nhật",
+    updating: "Đang cập nhật",
+    eventVN1: "Sự kiện mẫu 1",
+    eventVN2: "Sự kiện mẫu 2",
+    eventVN3: "Sự kiện mẫu 3",
+    eventGlobal1: "Sự kiện toàn cầu 1",
+    eventGlobal2: "Sự kiện toàn cầu 2",
+    eventGlobal3: "Sự kiện toàn cầu 3",
 
     // Industry section
     industryTitle: "Ngành",
@@ -81,7 +87,7 @@ export const translations = {
 
     // Promise section
     promiseTitle: "Danh mục triển vọng",
-    promiseContent: "Lorem ipsum dolor sit amet, consectetur adipiscing elits",
+    promiseContent: "Đây là nội dung mẫu cho phần cam kết triển vọng",
 
     // Library section
     libraryTitle: "Thư viện kiến thức",
@@ -158,11 +164,11 @@ export const translations = {
     secondary: "Secondary",
 
     // News sample content
-    newsTitle: "Lorem ipsum dolor sit amet consectetur adipiscing elit",
-    newsDesc:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    newsTitle: "Thís is a sample news title ",
+    newsDesc: 
+      "This is sample news description.",
     newsLongDesc:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+      "This is a longer sample news description. ",
 
     // Market section
     marketTitle: "Markets",
@@ -176,7 +182,13 @@ export const translations = {
     eventCalendar: "Event Calendar",
     domestic: "Domestic",
     global: "Global",
-    updating: "updating",
+    updating: "Updating",
+    eventVN1: "Event Demo 1",
+    eventVN2: "Event Demo 2",
+    eventVN3: "Event Demo 3",
+    eventGlobal1: "Event Global 1",
+    eventGlobal2: "Event Global 2",
+    eventGlobal3: "Event Global 3",
 
     // Industry section
     industryTitle: "Industries",
@@ -200,7 +212,7 @@ export const translations = {
     companyNewsTitle: "Company News",
     // Promise section
     promiseTitle: "Outlook Portfolio",
-    promiseContent: "Lorem ipsum dolor sit amet, consectetur adipiscing elits",
+    promiseContent: "This is sample content for the outlook portfolio section",
 
     // Library section
     libraryTitle: "Library",

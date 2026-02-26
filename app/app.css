@@ -21,6 +21,7 @@ body {
   --color-title-color: #000000;
   --color-warning-color: #dc2626;
   --color-success-color: #16a34a;
+  --color-logo: #123e8a;
   --color-secondary-bg-color: #123e8a;
   --color-footer-bg-color: #123e8a;
   --color-hover-text-color: #123e8a;
@@ -31,7 +32,8 @@ body {
 .dark {
   --color-main-bg-color: #202225;
   --color-node-bg-color: #23262d;
-  --color-title-color: #123e8a;
+  --color-logo: white;
+  --color-title-color: #ffffff;
   --color-footer-bg-color: #2d3036;
   --color-main-text-color: #fbfbfb;
 }

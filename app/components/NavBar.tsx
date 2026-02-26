@@ -102,8 +102,8 @@ export default function NavBar({
           to={language === "vi" ? "/" : `/${language}`}
           className="text-start text-nowrap text-secondary-bg-color my-auto font-bold inline-flex flex-col cursor-pointer select-none"
         >
-          <RTFLogo className="h-3 md:h-4 w-fit mb-1 fill-secondary-bg-color" />
-          <span className="text-[8px] md:text-[10px] font-semibold text-secondary-bg-color">
+          <RTFLogo className="h-3 md:h-4 w-fit mb-1 fill-logo" />
+          <span className="text-[8px] md:text-[10px] font-semibold text-logo/80">
             {t("siteDescription")}
           </span>
         </Link>

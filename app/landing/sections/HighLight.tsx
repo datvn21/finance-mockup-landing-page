@@ -24,7 +24,7 @@ export default function Highlight() {
               />
             </div>
             <div className="p-6 md:p-8">
-              <h2 className="text-xl md:text-2xl font-bold text-title-color mb-4 group-hover:text-hover-text-color  transition-colors">
+              <h2 className="text-xl md:text-2xl font-bold text-title-color mb-4   transition-colors">
                 {t("newsTitle")}
               </h2>
               <p className="text-main-text-color/60 mb-6 text-base md:text-md leading-relaxed line-clamp-3">
@@ -53,7 +53,7 @@ export default function Highlight() {
                       className="h-20 aspect-video object-cover rounded-lg shrink-0 border border-main-text-color/20 /60"
                     />
                     <div className="flex-1">
-                      <h4 className="font-semibold text-sm text-title-color mb-1 line-clamp-2 group-hover:text-hover-text-color transition-colors">
+                      <h4 className="font-semibold text-sm text-title-color mb-1 line-clamp-2 transition-colors">
                         {item.title}
                       </h4>
                       <p className="text-xs text-main-text-color/60 line-clamp-2">
@@ -84,7 +84,7 @@ export default function Highlight() {
                     className="aspect-video h-20 md:h-28 object-cover rounded-lg flex-shrink-0"
                   />
                   <div className="flex-1 flex flex-col justify-center">
-                    <h4 className="font-semibold text-md text-title-color mb-2 line-clamp-2 md:line-clamp-4 group-hover:text-hover-text-color  transition-colors">
+                    <h4 className="font-semibold text-md text-title-color mb-2 line-clamp-2 md:line-clamp-4   transition-colors">
                       {item.title}
                     </h4>
                     <p className="text-xs md:text-sm text-main-text-color/60 mb-2 line-clamp-2 md:line-clamp-3">
