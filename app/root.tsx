@@ -38,6 +38,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
     const path = location.pathname;
     if (path.startsWith("/en")) return "en";
     if (path.startsWith("/vi")) return "vi";
+
     return "vi"; // default to Vietnamese
   }, [location.pathname]);
 

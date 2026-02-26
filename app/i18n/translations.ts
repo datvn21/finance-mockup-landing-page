@@ -1,4 +1,13 @@
 export const translations = {
+  jp:{
+
+  },
+  cn:{
+
+  },
+  fr:{
+    
+  },
   vi: {
     // NavBar
     search: "TÌM KIẾM...",

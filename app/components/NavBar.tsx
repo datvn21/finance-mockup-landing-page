@@ -144,7 +144,7 @@ export default function NavBar({
                   </Link>
                   <div className="border-t border-main-text-color/10 my-1"></div>
                   <Link
-                    to={language === "vi" ? "/en" : "/"}
+                    to="/"
                     onClick={() => setMobileMenuOpen(false)}
                     className={`px-3 py-2 text-left rounded hover:bg-main-text-color/10 flex items-center gap-2 ${
                       language === "vi" ? "bg-main-text-color/5" : ""
@@ -154,7 +154,7 @@ export default function NavBar({
                     <span>Tiếng Việt</span>
                   </Link>
                   <Link
-                    to={language === "en" ? "/vi" : "/en"}
+                    to="/en"
                     onClick={() => setMobileMenuOpen(false)}
                     className={`px-3 py-2 text-left rounded hover:bg-main-text-color/10 flex items-center gap-2 ${
                       language === "en" ? "bg-main-text-color/5" : ""
@@ -162,6 +162,36 @@ export default function NavBar({
                   >
                     <span>🇬🇧</span>
                     <span>English</span>
+                  </Link>
+                  <Link
+                    to="#"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className={`px-3 py-2 text-left rounded hover:bg-main-text-color/10 flex items-center gap-2 ${
+                      language === "jp" ? "bg-main-text-color/5" : ""
+                    }`}
+                  >
+                    <span>🇯🇵</span>
+                    <span>日本語</span>
+                  </Link>
+                  <Link
+                    to="#"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className={`px-3 py-2 text-left rounded hover:bg-main-text-color/10 flex items-center gap-2 ${
+                      language === "cn" ? "bg-main-text-color/5" : ""
+                    }`}
+                  >
+                    <span>🇨🇳</span>
+                    <span>中文</span>
+                  </Link>
+                  <Link
+                    to="#"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className={`px-3 py-2 text-left rounded hover:bg-main-text-color/10 flex items-center gap-2 ${
+                      language === "fr" ? "bg-main-text-color/5" : ""
+                    }`}
+                  >
+                    <span>🇫🇷</span>
+                    <span>Français</span>
                   </Link>
                 </div>
               </div>
@@ -206,12 +236,36 @@ export default function NavBar({
             >
               <div>
                 <img
-                  src={language === "vi" ? "/vn.png" : "/us.png"}
-                  alt={language === "vi" ? "Vietnamese Flag" : "English Flag"}
-                  className="w-4 h-4"
+                  src={
+                    language === "vi"
+                      ? "/vn.png"
+                      : language === "en"
+                        ? "/us.png"
+                        : language === "jp"
+                          ? "/jp.png"
+                          : language === "cn"
+                            ? "/cn.jpg"
+                            : language === "fr"
+                              ? "/fr.png"
+                              : "/us.png"
+                  }
+                  alt={`${language} Flag`}
+                  className="h-4 w-auto"
                 />
               </div>
-              <span>{language === "vi" ? "Tiếng Việt" : "English"}</span>
+              <span>
+                {language === "vi"
+                  ? "Tiếng Việt"
+                  : language === "en"
+                    ? "English"
+                    : language === "jp"
+                      ? "日本語"
+                      : language === "cn"
+                        ? "中文"
+                        : language === "fr"
+                          ? "Français"
+                          : "English"}
+              </span>
               <svg
                 className={`w-4 h-4 transition-transform ${
                   languageMenuOpen ? "rotate-180" : ""
@@ -233,7 +287,7 @@ export default function NavBar({
               <div className="absolute right-0 top-full mt-2 w-36 bg-main-bg-color border border-main-text-color/20 rounded-md shadow-lg z-50">
                 <div className="flex flex-col p-1">
                   <Link
-                    to={language === "vi" ? "/en" : "/"}
+                    to="/"
                     onClick={() => setLanguageMenuOpen(false)}
                     className={`px-3 py-2 rounded hover:bg-main-text-color/10 flex items-center gap-2 ${
                       language === "vi" ? "bg-main-text-color/5" : ""
@@ -243,7 +297,7 @@ export default function NavBar({
                       <img
                         src="/vn.png"
                         alt="Vietnamese Flag"
-                        className="w-4 h-4"
+                        className="w-auto h-4"
                       />
                     </div>
                     <span className="text-sm font-semibold line-clamp-1">
@@ -251,7 +305,7 @@ export default function NavBar({
                     </span>
                   </Link>
                   <Link
-                    to={language === "en" ? "/vi" : "/en"}
+                    to="/en"
                     onClick={() => setLanguageMenuOpen(false)}
                     className={`px-3 py-2 rounded hover:bg-main-text-color/10 flex items-center gap-2 ${
                       language === "en" ? "bg-main-text-color/5" : ""
@@ -261,10 +315,58 @@ export default function NavBar({
                       <img
                         src="/us.png"
                         alt="English Flag"
-                        className="w-4 h-4"
+                        className="w-auto h-4"
                       />
                     </div>
                     <span className="text-sm font-semibold">English</span>
+                  </Link>
+                  <Link
+                    to="#"
+                    onClick={() => setLanguageMenuOpen(false)}
+                    className={`px-3 py-2 rounded hover:bg-main-text-color/10 flex items-center gap-2 ${
+                      language === "jp" ? "bg-main-text-color/5" : ""
+                    }`}
+                  >
+                    <div>
+                      <img
+                        src="/jp.png"
+                        alt="Japanese Flag"
+                        className="w-auto h-4"
+                      />
+                    </div>
+                    <span className="text-sm font-semibold">日本語</span>
+                  </Link>
+                  <Link
+                    to="#"
+                    onClick={() => setLanguageMenuOpen(false)}
+                    className={`px-3 py-2 rounded hover:bg-main-text-color/10 flex items-center gap-2 ${
+                      language === "cn" ? "bg-main-text-color/5" : ""
+                    }`}
+                  >
+                    <div>
+                      <img
+                        src="/cn.jpg"
+                        alt="Chinese Flag"
+                        className="w-auto h-4"
+                      />
+                    </div>
+                    <span className="text-sm font-semibold">中文</span>
+                  </Link>
+                  <Link
+                    to="#"
+                    onClick={() => setLanguageMenuOpen(false)}
+                    className={`px-3 py-2 rounded hover:bg-main-text-color/10 flex items-center gap-2 ${
+                      language === "fr" ? "bg-main-text-color/5" : ""
+                    }`}
+                  >
+                    <div>
+                      <img
+                        src="/fr.png"
+                        alt="French Flag"
+                        className="w-auto h-4"
+                      />
+                    </div>
+                    <span className="text-sm font-semibold">Français</span>
                   </Link>
                 </div>
               </div>
