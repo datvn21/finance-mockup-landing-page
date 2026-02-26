@@ -4,6 +4,7 @@ import { Link, useLocation } from "react-router";
 import { useLanguage } from "~/i18n/LanguageContext";
 import Tools from "./Tools";
 import RTFLogo from "../assets/RTF.svg?react";
+
 export default function NavBar({
   setDarkMode,
   darkMode,
@@ -13,11 +14,13 @@ export default function NavBar({
 }) {
   const [searchOpen, setSearchOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [languageMenuOpen, setLanguageMenuOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [hasScrolled, setHasScrolled] = useState(false);
   const searchRef = useRef<HTMLDivElement | null>(null);
   const mobileMenuRef = useRef<HTMLDivElement | null>(null);
+  const languageMenuRef = useRef<HTMLDivElement | null>(null);
   const { language, t } = useLanguage();
   const location = useLocation();
 
@@ -76,6 +79,12 @@ export default function NavBar({
       ) {
         setMobileMenuOpen(false);
       }
+      if (
+        languageMenuRef.current &&
+        !languageMenuRef.current.contains(e.target as Node)
+      ) {
+        setLanguageMenuOpen(false);
+      }
     }
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
@@ -133,12 +142,26 @@ export default function NavBar({
                   >
                     {t("signUp")}
                   </Link>
+                  <div className="border-t border-main-text-color/10 my-1"></div>
                   <Link
-                    to={getLanguagePath()}
+                    to={language === "vi" ? "/en" : "/"}
                     onClick={() => setMobileMenuOpen(false)}
-                    className="px-3 py-2 text-left rounded hover:bg-main-bg-color/80"
+                    className={`px-3 py-2 text-left rounded hover:bg-main-text-color/10 flex items-center gap-2 ${
+                      language === "vi" ? "bg-main-text-color/5" : ""
+                    }`}
                   >
-                    {t("language")}: {language.toUpperCase()}
+                    <span>🇻🇳</span>
+                    <span>Tiếng Việt</span>
+                  </Link>
+                  <Link
+                    to={language === "en" ? "/vi" : "/en"}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className={`px-3 py-2 text-left rounded hover:bg-main-text-color/10 flex items-center gap-2 ${
+                      language === "en" ? "bg-main-text-color/5" : ""
+                    }`}
+                  >
+                    <span>🇬🇧</span>
+                    <span>English</span>
                   </Link>
                 </div>
               </div>
@@ -175,13 +198,78 @@ export default function NavBar({
           </div>
 
           {/* language button - first on desktop */}
-          <Link
-            to={getLanguagePath()}
-            className="px-2 py-1 rounded-md  text-sm font-semibold hidden md:inline-flex cursor-pointer hover:opacity-50"
-            aria-label={t("language")}
-          >
-            VI/EN
-          </Link>
+          <div className="hidden md:block relative" ref={languageMenuRef}>
+            <button
+              onClick={() => setLanguageMenuOpen((v) => !v)}
+              className="px-3 py-1.5 rounded-md text-sm font-semibold inline-flex items-center gap-2 cursor-pointer hover:opacity-50 border border-main-text-color/20"
+              aria-label={t("language")}
+            >
+              <div>
+                <img
+                  src={language === "vi" ? "/vn.png" : "/us.png"}
+                  alt={language === "vi" ? "Vietnamese Flag" : "English Flag"}
+                  className="w-4 h-4"
+                />
+              </div>
+              <span>{language === "vi" ? "Tiếng Việt" : "English"}</span>
+              <svg
+                className={`w-4 h-4 transition-transform ${
+                  languageMenuOpen ? "rotate-180" : ""
+                }`}
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+
+            {languageMenuOpen && (
+              <div className="absolute right-0 top-full mt-2 w-36 bg-main-bg-color border border-main-text-color/20 rounded-md shadow-lg z-50">
+                <div className="flex flex-col p-1">
+                  <Link
+                    to={language === "vi" ? "/en" : "/"}
+                    onClick={() => setLanguageMenuOpen(false)}
+                    className={`px-3 py-2 rounded hover:bg-main-text-color/10 flex items-center gap-2 ${
+                      language === "vi" ? "bg-main-text-color/5" : ""
+                    }`}
+                  >
+                    <div className="">
+                      <img
+                        src="/vn.png"
+                        alt="Vietnamese Flag"
+                        className="w-4 h-4"
+                      />
+                    </div>
+                    <span className="text-sm font-semibold line-clamp-1">
+                      Tiếng Việt
+                    </span>
+                  </Link>
+                  <Link
+                    to={language === "en" ? "/vi" : "/en"}
+                    onClick={() => setLanguageMenuOpen(false)}
+                    className={`px-3 py-2 rounded hover:bg-main-text-color/10 flex items-center gap-2 ${
+                      language === "en" ? "bg-main-text-color/5" : ""
+                    }`}
+                  >
+                    <div>
+                      <img
+                        src="/us.png"
+                        alt="English Flag"
+                        className="w-4 h-4"
+                      />
+                    </div>
+                    <span className="text-sm font-semibold">English</span>
+                  </Link>
+                </div>
+              </div>
+            )}
+          </div>
 
           <Link
             to="/register"

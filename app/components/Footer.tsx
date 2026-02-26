@@ -115,10 +115,16 @@ export default function Footer() {
               <div>
                 <ul className="grid grid-cols-3 gap-4 mt-4 space-x-4">
                   <li className="cursor-pointer hover:underline text-white/80">
+                    {t("marketCategory")}
+                  </li>
+                  <li className="cursor-pointer hover:underline text-white/80">
                     {t("economyCategory")}
                   </li>
                   <li className="cursor-pointer hover:underline text-white/80">
                     {t("industryCategory")}
+                  </li>
+                  <li className="cursor-pointer hover:underline text-white/80">
+                    {t("companyCategory")}
                   </li>
                   <li className="cursor-pointer hover:underline text-white/80">
                     {t("worldCategory")}

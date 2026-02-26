@@ -15,6 +15,7 @@ export const translations = {
     policy: "CHÍNH SÁCH",
     opinion: "GÓC NHÌN",
     company: "DOANH NGHIỆP",
+    toolsMenu: "CÔNG CỤ",
     more: "KHÁC",
 
     // Site info
@@ -93,6 +94,8 @@ export const translations = {
     policyCategory: "Chính sách",
     perspectiveCategory: "Góc nhìn",
     libraryShortCategory: "Thư viện",
+    companyCategory: "Doanh nghiệp",
+    marketCategory: "Thị trường",
     followUs: "Theo dõi chúng tôi",
     categories: "Chuyên mục",
     quickAccess: "Truy cập nhanh",
@@ -110,11 +113,11 @@ export const translations = {
       "Giấy phép thiết lập trang thông tin điện tử tổng hợp trên mạng số …….. do Sở Văn Hoá và Thể Thao TP.HCM",
     responsiblePerson: "Chịu trách nhiệm nội dung: Bà Đinh Hạ Vân",
     address:
-      "Trụ sở: AB04.01, Khu AB, Tầng 4, Khu thương mại dịch vụ căn hộ cao tầng, số 58B Nguyễn Thị Thập, Phường Bình Thuận, Quận 7, Thành phố Hồ Chí Minh, Việt Nam",
+      "Trụ sở: 58B Nguyễn Thị Thập, Phường Tân Thuận, Thành phố Hồ Chí Minh, Việt Nam",
     phone: "Điện thoại",
     termsConditions: "Điều kiện và điều khoản sử dụng",
     privacyPolicy: "Chính sách bảo mật",
-    copyright: "© Copyright 2025-2025 Công ty Cổ phần ......",
+    copyright: "©Copyright thuộc CTCP 1001S",
   },
   en: {
     // NavBar
@@ -132,6 +135,7 @@ export const translations = {
     policy: "POLITICS",
     opinion: "OPINION",
     company: "COMPANY",
+    toolsMenu: "TOOLS",
     more: "MORE",
 
     // Site info
@@ -209,6 +213,8 @@ export const translations = {
     policyCategory: "Policy",
     perspectiveCategory: "Opinion",
     libraryShortCategory: "Library",
+    companyCategory: "Company",
+    marketCategory: "Markets",
     followUs: "Follow Us",
     categories: "Categories",
     quickAccess: "Quick Access",
@@ -223,14 +229,14 @@ export const translations = {
     perspective: "Opinion",
     libraryShort: "Library",
     licenseInfo:
-      "License No…… issued on ….,….2025 by tHo Chi Minh City Department of Culture and Sports",
+      "Electronic information portal establishment license No. …….. issued by Ho Chi Minh City Department of Culture and Sports",
     responsiblePerson: "Content responsible person: Ha-Van Dinh",
     address:
-      "Head Office: AB04.01, Block AB, 4th Floor, High-Rise Apartment Commercial Service Area, 58B Nguyen Thi Thap Street, Tan Thuan, Ho Chi Minh City, Vietnam",
+      "Head Office: 58B Nguyen Thi Thap Street, Tan Thuan Ward, Ho Chi Minh City, Vietnam",
     phone: "Tel",
     termsConditions: "Terms and Conditions",
     privacyPolicy: "Privacy Policy",
-    copyright: "Copyright ©Real Time Finance. All rights reserved.",
+    copyright: "@Copyright belongs to CTCP 1001S ",
   },
 } as const;
 

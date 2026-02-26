@@ -71,7 +71,7 @@ export default function Economy() {
         <div className="border-2 border-main-text-color/20  rounded-xl p-4 space-y-5 bg-node-bg-color ">
           {/* Trong nước */}
           <div>
-            <h4 className="font-semibold text-lg hover:opacity-70 mb-2 ">
+            <h4 className="font-semibold text-md hover:opacity-70 mb-2 ">
               {t("eventCalendar")} • {t("domestic")}
             </h4>
             <div className="space-y-1 text-sm">
@@ -92,7 +92,7 @@ export default function Economy() {
 
           {/* Quốc tế */}
           <div>
-            <h4 className="font-semibold text-lg hover:opacity-70 mb-2 ">
+            <h4 className="font-semibold text-md hover:opacity-70 mb-2 ">
               {t("eventCalendar")} • {t("global")}
             </h4>
             <div className="space-y-1 text-sm">

@@ -46,7 +46,7 @@ export default function CostUpdate() {
         {[...items, ...items].map((item, index) => (
           <div
             key={index}
-            className="flex flex-wrap min-w-[200px] space-x-1 flex-shrink-0"
+            className="flex flex-wrap min-w-[200px] space-x-1 shrink-0"
           >
             <div>
               {item.up ? (

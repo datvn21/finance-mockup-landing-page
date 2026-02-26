@@ -27,7 +27,7 @@ export default function Highlight() {
               <h2 className="text-xl md:text-2xl font-bold text-title-color mb-4 group-hover:text-hover-text-color  transition-colors">
                 {t("newsTitle")}
               </h2>
-              <p className="text-main-text-color/60 mb-6 text-base md:text-lg leading-relaxed line-clamp-3">
+              <p className="text-main-text-color/60 mb-6 text-base md:text-md leading-relaxed line-clamp-3">
                 {t("newsLongDesc")}
               </p>
               <p className="text-hover-text-color  text-sm font-semibold cursor-pointer transition-colors">
@@ -40,9 +40,6 @@ export default function Highlight() {
         {/* Secondary News Section - Takes 1 column */}
         <aside className="lg:col-span-1">
           <div className="bg-node-bg-color rounded-xl border-2 border-main-text-color/20 p-4 md:p-6 h-full">
-            <p className="text-sm font-bold text-main-text-color/70  pb-3">
-              {t("secondary")} • 1–5
-            </p>
             <div className="space-y-4">
               {newsItems.slice(0, 5).map((item, i) => (
                 <div
